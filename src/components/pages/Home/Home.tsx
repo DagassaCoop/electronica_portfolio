@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <>
       <Hero />
+      <div className="h-[100px]"></div>
     </>
   );
 };

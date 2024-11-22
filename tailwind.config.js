@@ -51,11 +51,12 @@ export default {
       addBase({});
       addComponents({
         ".container": {
-          "@apply max-w-[77.5rem] mx-auto px-[32px] md:px-[96px] lg:px-[128px] xl:max-w-[87.5rem] xl:mx-auto xl:px-0":
+          "@apply max-w-[77.5rem] mx-auto px-[32px] md:px-[96px] lg:px-[128px] xl:max-w-[70rem] xl:px-0":
             {},
         },
         ".h1": {
-          "@apply font-trap font-black text-[48px] lg:text-[64px]": {},
+          "@apply font-trap font-black text-[48px] leading-none 2xl:text-[64px]":
+            {},
         },
         ".h2": {
           "@apply font-trap font-black text-[32px]": {},
