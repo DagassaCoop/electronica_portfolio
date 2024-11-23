@@ -67,6 +67,9 @@ export default {
         ".body-2": {
           "@apply font-poppins text-[16px] leading-[1.2em]": {},
         },
+        ".nav-link": {
+          "@apply text-color-grey w-8 h-8": {},
+        },
       });
     }),
   ],

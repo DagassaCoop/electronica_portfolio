@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, MouseEvent, ReactNode } from "react";
 import { Link } from "react-router-dom";
 
 interface IIconButtonProps {
@@ -6,7 +6,7 @@ interface IIconButtonProps {
   className?: string;
   href?: string;
   isRoute?: boolean;
-  onClick?: () => void;
+  onClick?: (e: MouseEvent) => void;
 }
 
 const IconButton: FC<IIconButtonProps> = ({
@@ -16,20 +16,24 @@ const IconButton: FC<IIconButtonProps> = ({
   isRoute,
   onClick,
 }) => {
+  const classes = ["cursor-pointer", className].join(" ");
+
   return (
     <>
       {href ? (
         <>
           {isRoute ? (
-            <Link to={href}>{icon}</Link>
+            <Link to={href} className={classes} onClick={onClick}>
+              {icon}
+            </Link>
           ) : (
-            <a href={href} className={className}>
+            <a href={href} className={classes} onClick={onClick}>
               {icon}
             </a>
           )}
         </>
       ) : (
-        <div className={className} onClick={onClick}>
+        <div className={classes} onClick={onClick}>
           {icon}
         </div>
       )}

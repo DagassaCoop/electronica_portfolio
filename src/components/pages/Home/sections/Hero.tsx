@@ -1,13 +1,15 @@
 // Components
 import Button from "@/components/shared/Button";
+import IconButton from "@/components/shared/IconButton";
 
 // Assets
 import Branch from "@/assets/svg/Branch";
-import heart from "@/assets/heart.png";
 import HeroBgSvg from "@/assets/svg/HeroBgSvg";
 import heroPerson from "@/assets/hero-person.png";
 import ArrowTopRight from "@/assets/svg/ArrowTopRight";
-import IconButton from "@/components/shared/IconButton";
+
+// Icons
+import { Heart } from "@phosphor-icons/react";
 
 const Hero = () => {
   return (
@@ -31,7 +33,7 @@ const Hero = () => {
         </div>
         <div className="w-fit flex justify-between items-center gap-3">
           <p className="body-1">designs you&apos;ll</p>
-          <img src={heart} alt="Heart" />
+          <Heart weight="fill" className="text-color-pink" />
           <p className="body-1">, guaranteed.</p>
         </div>
       </div>

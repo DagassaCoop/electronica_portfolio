@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from "react";
+import { FC, MouseEvent, PropsWithChildren } from "react";
 import { Link } from "react-router-dom";
 
 interface IButtonProps extends PropsWithChildren {
@@ -6,7 +6,8 @@ interface IButtonProps extends PropsWithChildren {
   variant?: "blue" | "white" | "black";
   href?: string;
   isRoute?: boolean;
-  onClick?: () => void;
+  transition?: boolean;
+  onClick?: (e: MouseEvent) => void;
 }
 
 const Button: FC<IButtonProps> = ({
@@ -14,6 +15,7 @@ const Button: FC<IButtonProps> = ({
   variant,
   href,
   isRoute,
+  transition = true,
   onClick,
   children,
 }) => {
@@ -31,9 +33,12 @@ const Button: FC<IButtonProps> = ({
   };
 
   const classes = [
-    "button w-fit flex justify-center items-center py-[16px] px-[48px] hover:-translate-y-[6px] transition ease-in-out",
+    "button w-fit flex justify-center items-center py-[16px] px-[48px] ",
     className,
     getColors(),
+    transition
+      ? "hover:-translate-y-[6px] transition ease-in-out cursor-pointer"
+      : "",
   ].join(" ");
 
   console.log(classes);
@@ -45,11 +50,16 @@ const Button: FC<IButtonProps> = ({
       {href ? (
         <>
           {isRoute ? (
-            <Link to={href} className={classes}>
+            <Link to={href} className={classes} onClick={onClick}>
               {span}
             </Link>
           ) : (
-            <a href={href} className={classes} target="_blank">
+            <a
+              href={href}
+              className={classes}
+              target="_blank"
+              onClick={onClick}
+            >
               {span}
             </a>
           )}
