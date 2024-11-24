@@ -13,12 +13,11 @@ import { List, X } from "@phosphor-icons/react";
 // Mock
 import { navLinks } from "@/mock";
 import Button from "./Button";
-import PulseLines from "@/assets/svg/PulseLines";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
-  const handleLinkClick = (e: MouseEvent) => {
+  const handleLinkClick = () => {
     setOpen(false);
   };
 
@@ -118,18 +117,15 @@ const Header = () => {
               isRoute
               className="hidden md:block xl:hidden"
             />
-            <div className="hidden xl:block relative hover:-translate-y-[6px] transition ease-in-out">
-              <Button
-                className=""
-                variant="black"
-                href={lastNavLink?.path}
-                isRoute
-                transition={false}
-              >
-                {lastNavLink?.title}
-              </Button>
-              <PulseLines className="absolute -right-5 -top-4" />
-            </div>
+            <Button
+              className="hidden xl:block relative"
+              variant="black"
+              href={lastNavLink?.path}
+              isRoute
+              icon
+            >
+              {lastNavLink?.title}
+            </Button>
           </div>
         </div>
       </div>

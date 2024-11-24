@@ -1,12 +1,16 @@
 import { FC, MouseEvent, PropsWithChildren } from "react";
 import { Link } from "react-router-dom";
 
+// Assets
+import PulseLines from "@/assets/svg/PulseLines";
+
 interface IButtonProps extends PropsWithChildren {
   className?: string;
   variant?: "blue" | "white" | "black";
   href?: string;
   isRoute?: boolean;
-  transition?: boolean;
+  icon?: boolean;
+  iconClass?: string;
   onClick?: (e: MouseEvent) => void;
 }
 
@@ -15,7 +19,8 @@ const Button: FC<IButtonProps> = ({
   variant,
   href,
   isRoute,
-  transition = true,
+  icon,
+  iconClass,
   onClick,
   children,
 }) => {
@@ -33,17 +38,24 @@ const Button: FC<IButtonProps> = ({
   };
 
   const classes = [
-    "button w-fit flex justify-center items-center py-[16px] px-[48px] ",
+    "button w-fit flex justify-center items-center py-[16px] px-[48px] hover:-translate-y-[6px] transition ease-in-out cursor-pointer",
     className,
     getColors(),
-    transition
-      ? "hover:-translate-y-[6px] transition ease-in-out cursor-pointer"
-      : "",
   ].join(" ");
 
   console.log(classes);
 
   const span = <span className="body-1 font-bold ">{children}</span>;
+  const iconEl = (
+    <PulseLines className={["absolute -right-5 -top-4", iconClass].join(" ")} />
+  );
+
+  const content = (
+    <>
+      {span}
+      {icon && iconEl}
+    </>
+  );
 
   return (
     <>
@@ -51,7 +63,7 @@ const Button: FC<IButtonProps> = ({
         <>
           {isRoute ? (
             <Link to={href} className={classes} onClick={onClick}>
-              {span}
+              {content}
             </Link>
           ) : (
             <a
@@ -60,13 +72,13 @@ const Button: FC<IButtonProps> = ({
               target="_blank"
               onClick={onClick}
             >
-              {span}
+              {content}
             </a>
           )}
         </>
       ) : (
         <div className={classes} onClick={onClick}>
-          {span}
+          {content}
         </div>
       )}
     </>
