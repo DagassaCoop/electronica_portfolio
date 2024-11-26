@@ -1,11 +1,12 @@
 // Sections
 import Hero from "./sections/Hero";
+import Projects from "./sections/Projects";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <div className="h-[100px]"></div>
+      <Projects />
     </>
   );
 };

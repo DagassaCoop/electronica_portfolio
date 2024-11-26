@@ -4,7 +4,7 @@ import IconButton from "@/components/shared/IconButton";
 
 // Assets
 import Branch from "@/assets/svg/Branch";
-import HeroBgSvg from "@/assets/svg/HeroBgSvg";
+import Hypotrochoid from "@/assets/svg/Hypotrochoid";
 import heroPerson from "@/assets/hero-person.png";
 import ArrowTopRight from "@/assets/svg/ArrowTopRight";
 
@@ -43,7 +43,7 @@ const Hero = () => {
         <div className="relative z-3 w-[650px] xl:w-full">
           <img src={heroPerson} alt="person" className="relative z-3 w-full" />
           <div className="absolute inset-0 flex justify-center items-center translate-y-32 -translate-x-4 md:-translate-x-24 md:inset-6 xl:translate-x-0 xl:inset-0">
-            <HeroBgSvg className="relative text-color-violet rotate-12" />
+            <Hypotrochoid className="relative text-color-violet rotate-12" />
           </div>
         </div>
       </div>

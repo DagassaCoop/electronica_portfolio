@@ -3,7 +3,7 @@ import { FC } from "react";
 // Entities
 import { ISvgBase } from "@/entities/Svg";
 
-const HeroBgSvg: FC<ISvgBase> = ({ className, width, height }) => {
+const Hypotrochoid: FC<ISvgBase> = ({ className, width, height }) => {
   return (
     <svg
       width={width || "795"}
@@ -53,4 +53,4 @@ const HeroBgSvg: FC<ISvgBase> = ({ className, width, height }) => {
   );
 };
 
-export default HeroBgSvg;
+export default Hypotrochoid;
