@@ -12,7 +12,7 @@ const Works = () => {
       className="relative w-full mt-[128px] px-0 sm:px-8 max-md:overflow-hidden"
     >
       <div className="relative w-full h-full bg-color-blue pb-[300px] lg:pb-[200px] overflow-hidden">
-        <div className="relative z-5 flex flex-col justify-between items-center min-w-[300px] max-w-[500px] mx-auto pt-28 pb-[200px] lg:items-start lg:ml-[10%] lg:pb-0 xl:max-w-[600px]">
+        <div className="relative z-5 flex flex-col justify-between items-center min-w-[300px] max-w-[500px] mx-auto pt-28 pb-[200px] lg:items-start lg:ml-[6rem] lg:pb-0 xl:max-w-[600px] xl:ml-[9rem]">
           <h1 className="relative h1 text-color-black text-center mb-20 lg:text-start">
             Here are some of my past projects.
           </h1>
