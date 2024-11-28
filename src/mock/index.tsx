@@ -141,6 +141,6 @@ export const SliderItems: ISliderItem[] = [
 
 export const contactInfo = {
   email: "sashababich6@gmail.com",
-  instagram: "",
+  instagram: "https://www.instagram.com/curly_dreamer/",
   linkedIn: "https://www.linkedin.com/in/oleksandra-babich/",
 };

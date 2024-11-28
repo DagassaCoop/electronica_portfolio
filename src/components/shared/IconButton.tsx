@@ -27,7 +27,12 @@ const IconButton: FC<IIconButtonProps> = ({
               {icon}
             </Link>
           ) : (
-            <a href={href} className={classes} onClick={onClick}>
+            <a
+              href={href}
+              className={classes}
+              onClick={onClick}
+              target="_blank"
+            >
               {icon}
             </a>
           )}
