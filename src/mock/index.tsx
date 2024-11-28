@@ -138,3 +138,9 @@ export const SliderItems: ISliderItem[] = [
     bgImage: "",
   },
 ];
+
+export const contactInfo = {
+  email: "",
+  instagram: "",
+  linkedIn: "",
+};

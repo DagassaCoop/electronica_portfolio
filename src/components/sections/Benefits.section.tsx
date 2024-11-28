@@ -4,7 +4,7 @@ import Slider from "../shared/Slider/Slider";
 
 const Benefits = () => {
   return (
-    <section id="benefit" className="container relative mt-[128px]">
+    <section id="benefit" className="container relative mt-32 mb-24">
       <h1 className="h1 mb-16">
         Calculated, Tailored <br /> Marketing.
       </h1>
