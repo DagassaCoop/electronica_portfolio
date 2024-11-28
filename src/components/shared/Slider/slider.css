@@ -1,0 +1,11 @@
+.swiper {
+  @apply overflow-auto pb-20 xl:p-0 xl:overflow-hidden !important;
+}
+
+.swiper-wrapper {
+  @apply h-[90%] xl:h-full !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-color-grey;
+}

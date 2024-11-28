@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "Trap";
-  src: local("Trap-Bold"), url("./assets/fonts/Trap/Trap-Bold.otf");
-  font-weight: 700;
+  src: local("Trap-ExtraBold"), url("./assets/fonts/Trap/Trap-ExtraBold.otf");
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -36,6 +36,7 @@ body {
   --font-poppins: "Poppins", sans-serif;
   --font-trap: "Trap", sans-serif;
 }
+
 * {
   scroll-behavior: smooth;
 }

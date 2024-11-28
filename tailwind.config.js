@@ -47,7 +47,7 @@ export default {
     },
   },
   plugins: [
-    plugin(function ({ addBase, addComponents, addUtilities }) {
+    plugin(function ({ addBase, addComponents }) {
       addBase({});
       addComponents({
         ".container": {
@@ -59,7 +59,7 @@ export default {
             {},
         },
         ".h2": {
-          "@apply font-trap font-black text-[32px]": {},
+          "@apply font-trap font-extrabold text-[32px] leading-none": {},
         },
         ".body-1": {
           "@apply font-poppins text-[16px] leading-none": {},

@@ -1,6 +1,7 @@
 // Entities
 import { INavLink } from "@/entities/NavLink";
 import { IWork } from "@/entities/Work";
+import { ISliderItem } from "@/entities/SliderItem";
 
 // Icons
 import {
@@ -9,6 +10,9 @@ import {
   FilmReel,
   Suitcase,
   PaperPlaneTilt,
+  MagicWand,
+  Clock,
+  Flask,
 } from "@phosphor-icons/react";
 
 // Assets
@@ -81,5 +85,56 @@ export const Works: IWork[] = [
     img: work4,
     date: new Date(),
     link: "",
+  },
+];
+
+export const SliderItems: ISliderItem[] = [
+  {
+    id: "1",
+    title: "Magical, fairy-tale results.",
+    description:
+      "Unbelievable track record that breaks records on the regular.",
+    icon: (
+      <MagicWand
+        weight="fill"
+        width={48}
+        height={48}
+        className="text-color-violet"
+      />
+    ),
+    iconPosition: "left",
+    bgImage: "",
+  },
+  {
+    id: "2",
+    title: "On time service.",
+    description:
+      "I deliver fast. Often times design is slower than it needs to be. I deliver in 1-2 days.",
+    icon: (
+      <Clock
+        weight="fill"
+        width={48}
+        height={48}
+        className="text-color-violet"
+      />
+    ),
+    iconPosition: "center",
+    bgImage: "",
+  },
+  {
+    id: "3",
+    title: "Researched and tested.",
+    description:
+      "Unbelievable track record that breaks records on the regular.",
+    icon: (
+      <Flask
+        weight="fill"
+        width={48}
+        height={48}
+        className="text-color-violet"
+      />
+    ),
+    iconPosition: "right",
+    bgImage: "",
   },
 ];

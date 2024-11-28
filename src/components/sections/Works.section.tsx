@@ -9,7 +9,7 @@ const Works = () => {
   return (
     <section
       id="works"
-      className="relative w-full mt-[128px] px-0 sm:px-8 max-md:overflow-hidden"
+      className="relative w-full mt-[128px] px-0 sm:px-8 max-lg:overflow-hidden"
     >
       <div className="relative w-full h-full bg-color-blue pb-[300px] lg:pb-[200px] overflow-hidden">
         <div className="relative z-5 flex flex-col justify-between items-center min-w-[300px] max-w-[500px] mx-auto pt-28 pb-[200px] lg:items-start lg:ml-[6rem] lg:pb-0 xl:max-w-[600px] xl:ml-[9rem]">
