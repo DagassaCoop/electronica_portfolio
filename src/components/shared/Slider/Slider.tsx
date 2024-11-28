@@ -104,7 +104,7 @@ const Slider: FC<ISliderProps> = ({ className }) => {
                   />
                 )}
               </div>
-              <div className="absolute inset-0 z-5 flex justify-center items-center">
+              <div className="absolute sm:inset-0 z-5 flex justify-center items-center max-sm:w-fit">
                 <SliderBgImage active={item.iconPosition} />
               </div>
             </SwiperSlide>

@@ -13,7 +13,7 @@ import { navLinks, contactInfo } from "@/mock";
 
 const Footer = () => {
   return (
-    <footer className="container flex flex-col items-center bg-color-black text-white text-center pt-24 pb-8">
+    <footer className="flex flex-col items-center bg-color-black text-white text-center pt-24 pb-8">
       <h1 className="h1 mb-4">The best time is now.</h1>
       <p className="body-1 mb-16">
         Let me tell you more about how life-changing this is.
@@ -59,28 +59,33 @@ const Footer = () => {
         {contactInfo.email || "gmail.com"}
       </a>
       <div className="flex justify-center items-center gap-8">
-        <IconButton
-          icon={
-            <InstagramLogo
-              weight="fill"
-              width={36}
-              height={36}
-              className="text-white opacity-30 hover:opacity-100 transition ease-in-out"
-            />
-          }
-          href={contactInfo.instagram}
-        />
-        <IconButton
-          icon={
-            <LinkedinLogo
-              weight="fill"
-              width={36}
-              height={36}
-              className="text-white opacity-30 hover:opacity-100 transition ease-in-out"
-            />
-          }
-          href={contactInfo.linkedIn}
-        />
+        {contactInfo.instagram && (
+          <IconButton
+            icon={
+              <InstagramLogo
+                weight="fill"
+                width={36}
+                height={36}
+                className="text-white opacity-30 hover:opacity-100 transition ease-in-out"
+              />
+            }
+            href={contactInfo.instagram}
+          />
+        )}
+
+        {contactInfo.linkedIn && (
+          <IconButton
+            icon={
+              <LinkedinLogo
+                weight="fill"
+                width={36}
+                height={36}
+                className="text-white opacity-30 hover:opacity-100 transition ease-in-out"
+              />
+            }
+            href={contactInfo.linkedIn}
+          />
+        )}
       </div>
     </footer>
   );

@@ -1,5 +1,5 @@
 .swiper {
-  @apply overflow-auto pb-20 xl:p-0 xl:overflow-hidden !important;
+  @apply overflow-y-auto pb-20 xl:p-0 xl:overflow-hidden !important;
 }
 
 .swiper-wrapper {
