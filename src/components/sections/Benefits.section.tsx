@@ -1,5 +1,4 @@
 // Components
-import SliderBgImage from "@/assets/svg/SliderBgImage";
 import Button from "../shared/Button";
 import Slider from "../shared/Slider/Slider";
 
@@ -16,9 +15,6 @@ const Benefits = () => {
         </p>
         <Button>contact me</Button>
       </div>
-      {/* <div className="w-full flex justify-center">
-        <SliderBgImage active="right" />
-      </div> */}
     </section>
   );
 };
