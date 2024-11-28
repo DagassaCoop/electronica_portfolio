@@ -63,7 +63,7 @@ const Slider: FC<ISliderProps> = ({ className }) => {
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
-        // autoplay={true}
+        autoplay={{ delay: 4000 }}
         pagination={pagination}
         modules={[Autoplay, Pagination]}
         className="mySwiper w-full"
