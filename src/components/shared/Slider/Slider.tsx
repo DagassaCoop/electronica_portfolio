@@ -72,7 +72,7 @@ const Slider: FC<ISliderProps> = ({ className }) => {
           return (
             <SwiperSlide
               key={item.id}
-              className="relative min-h-[400px] justify-center items-center cursor-grab"
+              className="relative min-h-[400px] justify-center items-center cursor-grab mask-x"
               style={{ height: "auto", display: "flex" }}
             >
               <div
