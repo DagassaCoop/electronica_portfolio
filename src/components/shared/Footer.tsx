@@ -2,18 +2,20 @@ import { Link } from "react-router-dom";
 
 // Components
 import Button from "./Button";
+import IconButton from "./IconButton";
 
 // Assets
 import Logo from "@/assets/svg/Logo";
-import IconButton from "./IconButton";
 import { InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
+import Hypotrochoid from "@/assets/svg/Hypotrochoid";
+import Spiral from "@/assets/svg/Spiral";
 
 // Mock
 import { navLinks, contactInfo } from "@/mock";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center bg-color-black text-white text-center pt-24 pb-8">
+    <footer className="relative overflow-hidden flex flex-col items-center bg-color-black text-white text-center pt-24 pb-8">
       <h1 className="h1 mb-4">
         The best time <br /> is now.
       </h1>
@@ -88,6 +90,13 @@ const Footer = () => {
             href={contactInfo.linkedIn}
           />
         )}
+      </div>
+
+      <div className="absolute left-0 top-[10%] -translate-x-1/2 w-fit h-fit hidden xl:block">
+        <Spiral className="text-color-greyLight" />
+      </div>
+      <div className="absolute right-0 top-[-10%] translate-x-1/2 w-fit h-fit hidden xl:block">
+        <Hypotrochoid className="text-color-greyLight" />
       </div>
     </footer>
   );
