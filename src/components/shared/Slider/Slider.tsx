@@ -12,7 +12,7 @@ import CaretRight from "@/assets/svg/CaretRight";
 import "./slider.css";
 
 // Mock
-import { SliderItems } from "@/mock";
+import { sliderItems } from "@/mock";
 
 // Components
 import IconButton from "../IconButton";
@@ -63,12 +63,12 @@ const Slider: FC<ISliderProps> = ({ className }) => {
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
-        autoplay={{ delay: 4000 }}
+        autoplay={{ delay: 4000, pauseOnMouseEnter: true }}
         pagination={pagination}
         modules={[Autoplay, Pagination]}
         className="mySwiper w-full"
       >
-        {SliderItems.map((item) => {
+        {sliderItems.map((item) => {
           return (
             <SwiperSlide
               key={item.id}

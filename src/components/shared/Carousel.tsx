@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
 // Mock
-import { Works } from "@/mock";
+import { works } from "@/mock";
 
 // Entities
 import { IWorkPreview } from "@/entities/Work";
@@ -14,7 +14,7 @@ const GAP = 30;
 
 const Carousel = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const worksPreview: IWorkPreview[] = Works.map((item) => {
+  const worksPreview: IWorkPreview[] = works.map((item) => {
     return {
       id: item.id,
       title: item.title,

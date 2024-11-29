@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="container relative pt-[200px] pb-[290px] overflow-hidden max-w-full m-0 md:pt-[96px] xl:py-[200px] xl:px-[10%] xl:h-screen xl:max-h-[800px] xl:overflow-visible"
+      className="container relative section-start pb-[290px] xl:pb-[200px] overflow-hidden max-w-full m-0 xl:px-[10%] xl:h-screen xl:max-h-[800px] xl:overflow-visible"
     >
       {/* Text content */}
       <div className="relative z-2 max-w-[60%] min-w-[400px] xl:max-w-1/2 pb-[300px] md:pb-[150px] xl:pb-0 xl:max-w-[50%]">
@@ -28,7 +28,9 @@ const Hero = () => {
         </p>
 
         <div className="flex gap-6 mt-16 mb-5">
-          <Button>book a free call</Button>
+          <Button href="/contact" isRoute>
+            book a free call
+          </Button>
           <Branch />
         </div>
         <div className="w-fit flex justify-between items-center gap-3">

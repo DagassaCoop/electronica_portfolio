@@ -2,9 +2,9 @@ import { RouteObject } from "react-router-dom";
 
 // Components
 import App from "../App";
-import Home from "@/components/pages/Home.page";
+import Home from "@/components/pages/Home/Home.page";
 import About from "@/components/pages/About.page";
-import Works from "@/components/pages/Works.page";
+import Works from "@/components/pages/Works/Works.page";
 import Services from "@/components/pages/Services.page";
 import Contact from "@/components/pages/Contact.page";
 

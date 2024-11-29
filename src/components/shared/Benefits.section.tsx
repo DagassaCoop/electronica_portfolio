@@ -13,7 +13,9 @@ const Benefits = () => {
         <p className="body-1 text-sm mb-4">
           let me tell you more about how life-changing this is.
         </p>
-        <Button>contact me</Button>
+        <Button href="/contact" isRoute>
+          contact me
+        </Button>
       </div>
     </section>
   );

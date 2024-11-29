@@ -49,7 +49,7 @@ export const navLinks: INavLink[] = [
   },
 ];
 
-export const Works: IWork[] = [
+export const works: IWork[] = [
   {
     id: "1",
     title: "Title 1",
@@ -88,7 +88,7 @@ export const Works: IWork[] = [
   },
 ];
 
-export const SliderItems: ISliderItem[] = [
+export const sliderItems: ISliderItem[] = [
   {
     id: "1",
     title: "Magical, fairy-tale results.",
