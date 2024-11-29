@@ -16,7 +16,7 @@ const PulseLines: FC<ISvgBase> = ({ className, width, height }) => {
       <g clipPath="url(#clip0_7_54)">
         <path
           d="M2 8.805L5.967 2.624M8.936 10.87L18 2M11.693 18L17.074 14.344"
-          stroke="#211A1D"
+          stroke="currentcolor"
           strokeWidth="4"
           strokeMiterlimit="10"
           strokeLinecap="round"

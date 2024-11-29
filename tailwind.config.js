@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export default {
@@ -66,6 +65,9 @@ export default {
         },
         ".body-2": {
           "@apply font-poppins text-[16px] leading-[1.2em]": {},
+        },
+        ".body-3": {
+          "@apply font-poppins text-[16px] leading-[1.5em]": {},
         },
         ".nav-link": {
           "@apply text-color-grey w-8 h-8": {},

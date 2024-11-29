@@ -14,7 +14,9 @@ import { navLinks, contactInfo } from "@/mock";
 const Footer = () => {
   return (
     <footer className="flex flex-col items-center bg-color-black text-white text-center pt-24 pb-8">
-      <h1 className="h1 mb-4">The best time is now.</h1>
+      <h1 className="h1 mb-4">
+        The best time <br /> is now.
+      </h1>
       <p className="body-1 mb-16">
         Let me tell you more about how life-changing this is.
       </p>

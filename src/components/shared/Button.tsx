@@ -38,14 +38,14 @@ const Button: FC<IButtonProps> = ({
   };
 
   const classes = [
-    "button w-fit flex justify-center items-center py-[16px] px-[48px] hover:-translate-y-[6px] transition ease-in-out cursor-pointer",
+    "button relative w-fit flex justify-center items-center py-[16px] px-[48px] hover:-translate-y-[6px] transition ease-in-out cursor-pointer",
     className,
     getColors(),
   ].join(" ");
 
   console.log(classes);
 
-  const span = <span className="body-1 font-bold ">{children}</span>;
+  const span = <span className="body-1 font-bold">{children}</span>;
   const iconEl = (
     <PulseLines className={["absolute -right-5 -top-4", iconClass].join(" ")} />
   );

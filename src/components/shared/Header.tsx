@@ -123,6 +123,7 @@ const Header = () => {
               href={lastNavLink?.path}
               isRoute
               icon
+              iconClass="text-color-black"
             >
               {lastNavLink?.title}
             </Button>
