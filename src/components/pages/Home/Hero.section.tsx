@@ -1,21 +1,20 @@
 // Components
 import Button from "@/components/shared/Button";
-import IconButton from "@/components/shared/IconButton";
 
 // Assets
 import Branch from "@/assets/svg/Branch";
 import Hypotrochoid from "@/assets/svg/Hypotrochoid";
 import heroPerson from "@/assets/hero-person.png";
-import ArrowTopRight from "@/assets/svg/ArrowTopRight";
 
 // Icons
 import { Heart } from "@phosphor-icons/react";
+import Promo from "@/components/shared/Promo";
 
 const Hero = () => {
   return (
     <section
       id="hero"
-      className="container relative section-start pb-[290px] xl:pb-[200px] overflow-hidden max-w-full m-0 xl:px-[10%] xl:h-screen xl:max-h-[800px] xl:overflow-visible"
+      className="container relative pt-[200px] md:pt-[96px] xl:pt-[200px] pb-[290px] xl:pb-[200px] overflow-hidden max-w-full m-0 xl:px-[10%] xl:h-screen xl:max-h-[800px] xl:overflow-visible"
     >
       {/* Text content */}
       <div className="relative z-2 max-w-[60%] min-w-[400px] xl:max-w-1/2 pb-[300px] md:pb-[150px] xl:pb-0 xl:max-w-[50%]">
@@ -51,24 +50,7 @@ const Hero = () => {
       </div>
 
       {/* Contact */}
-      <div className="absolute hidden z-10 -bottom-4 right-[150px] w-[300px] p-4 bg-color-black flex-col gap-4 xl:flex">
-        <div className="text-white flex justify-between">
-          <h3 className="font-trap font-bold text-2xl">
-            Let&apos;s discuss upgrades,free of charge!
-          </h3>
-          <div>
-            <IconButton
-              icon={<ArrowTopRight />}
-              className="cursor-pointer"
-              href="/contact"
-              isRoute
-            />
-          </div>
-        </div>
-        <Button variant="white" className="w-full" href="/contact" isRoute>
-          get in touch
-        </Button>
-      </div>
+      <Promo className="absolute hidden z-10 -bottom-4 right-[150px] " />
 
       {/* Backgrounds */}
       <div className="absolute z-1 bottom-0 left-0 right-0 bg-color-blue h-[290px] xl:hidden"></div>

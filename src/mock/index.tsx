@@ -144,3 +144,10 @@ export const contactInfo = {
   instagram: "https://www.instagram.com/curly_dreamer/",
   linkedIn: "https://www.linkedin.com/in/oleksandra-babich/",
 };
+
+export const services: string[] = [
+  "Video production",
+  "Video editing",
+  "Content creation",
+  "Graphic design",
+];

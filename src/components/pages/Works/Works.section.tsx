@@ -9,7 +9,7 @@ import { Heart } from "@phosphor-icons/react";
 
 const WorksSection = () => {
   return (
-    <section id="works" className="relative container section-start">
+    <section id="works" className="relative container pt-12 pb-24">
       <h1 className="h1 mb-4">Past works</h1>
       <p className="body-1 mb-16">
         Here are some our past projects. We take care in bringing the best out

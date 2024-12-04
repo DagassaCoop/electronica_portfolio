@@ -72,9 +72,6 @@ export default {
         ".nav-link": {
           "@apply text-color-grey w-8 h-8": {},
         },
-        ".section-start": {
-          "@apply pt-[200px] md:pt-[96px] xl:pt-[200px]": {},
-        },
       });
     }),
   ],
