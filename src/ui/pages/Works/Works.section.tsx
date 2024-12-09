@@ -41,9 +41,9 @@ const WorksSection = () => {
     <section id="works" className="relative container pt-12 pb-24">
       <h1 className="h1 mb-4">Past works</h1>
       <p className="body-1 mb-16">
-        Here are some our past projects. We take care in bringing the best out
-        of their offering and making them stand out both in their field, and in
-        the real world.
+        Here are some our past projects. I take care in bringing the best out of
+        their offering and making them stand out both in their field, and in the
+        real world.
       </p>
 
       <div className="grid grid-cols-2 max-sm:gap-4 sm:flex justify-around items-center w-full h-auto mb-8">
@@ -65,17 +65,12 @@ const WorksSection = () => {
         })}
       </div>
 
-      <div
-        className={[
-          "w-full grid xl:grid-cols-2 gap-14 mb-20",
-          workGroup === "short video" ? "md:grid-cols-2 lg:grid-cols-3" : "",
-        ].join(" ")}
-      >
+      <div className="w-full grid xl:grid-cols-2 gap-14 mb-20">
         {works.map((item) => {
           return <WorkProject project={item} key={item.id} />;
         })}
       </div>
-      <div>
+      {/* <div>
         <p className="body-1 mb-4">Want to collaborate on a future project?</p>
         <Button
           href="/contact"
@@ -90,7 +85,7 @@ const WorksSection = () => {
           <Heart weight="fill" className="text-color-pink" />
           <p className="body-1">, guaranteed.</p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

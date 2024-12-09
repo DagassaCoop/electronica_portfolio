@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Assets
 import PulseLines from "@/assets/svg/PulseLines";
 
-interface IButtonProps extends PropsWithChildren {
+export interface IButtonProps extends PropsWithChildren {
   className?: string;
   variant?: "blue" | "white" | "black";
   href?: string;

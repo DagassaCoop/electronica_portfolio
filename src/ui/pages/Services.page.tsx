@@ -20,8 +20,7 @@ const Services = () => {
           <h1 className="h1 mb-4">Services</h1>
           <p className="body-2 mb-14">
             Whether you're a startup seeking a captivating brand identity, a
-            business looking to elevate your web presence, we've got you
-            covered.
+            business looking to elevate your web presence, I've got you covered.
           </p>
           <ol className="mb-10">
             {services.map((item, index) => {
@@ -37,10 +36,12 @@ const Services = () => {
             })}
           </ol>
           <p className="body-2 mb-4">
-            We tailor your experience to your specific needs, if you’d like to
+            I tailor your experience to your specific needs, if you’d like to
             hear more, hop on a free call with us.
           </p>
-          <Button>see my experience</Button>
+          <Button href="/works" isRoute>
+            see my experience
+          </Button>
         </div>
         <div className="flex justify-center min-[1200px]:justify-end">
           <div className="relative z-5 p-8 bg-color-greyLight max-w-[300px] min-[1200px]:max-w-[400px] h-fit xl:max-w-[500px]">

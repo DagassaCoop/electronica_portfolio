@@ -1,10 +1,10 @@
 // Assets
-import { Heart, LinkedinLogo, InstagramLogo } from "@phosphor-icons/react";
-import person from "@/assets/about-person.webp";
+import { LinkedinLogo, InstagramLogo } from "@phosphor-icons/react";
+import person from "@/assets/about-person.jpg";
 
 // Components
-import Button from "../components/Button";
 import IconButton from "../components/IconButton";
+import LoadFileButton from "../components/LoadFileButton";
 
 // Mock
 import { contactInfo } from "@/mock";
@@ -25,41 +25,39 @@ const About = () => {
         <div className="max-md:container flex flex-col">
           <h1 className="h1 mb-6">About me.</h1>
           <p className="body-3 mb-4">
-            My name is Matt, and I am a passionate and experienced web designer
-            and product designer.
+            Hey! I'm Sasha. A passionate video production expert and digital
+            marketer here to bring your vision to life!
           </p>
           <p className="body-3 mb-4">
-            With a keen eye for aesthetics and a deep understanding of user
-            experience, I strive to create digital experiences that are not only
-            visually stunning but also highly functional and intuitive.
+            With a keen eye for detail and a flair for storytelling, I
+            specialize in delivering powerful video production services,
+            including videography, video editing, and sound design. Whether
+            you're looking to craft an impactful brand story, engage viewers
+            with captivating visuals, or enhance your social media presence,
+            I've got you covered.
           </p>
           <p className="body-3 mb-12">
-            My journey in design began 7 years ago, and since then, I have had
-            the privilege of working with a diverse range of clients, from
-            startups to established businesses, helping them elevate their
-            online presence and product offerings.
+            Beyond video production, I offer comprehensive social media
+            management, focusing on YouTube channel growth and community
+            engagement. My approach ensures that each piece of content is not
+            only beautifully crafted but also strategically designed to boost
+            your digital footprint.
           </p>
 
-          <Button
-            href="/contact"
-            isRoute
-            icon
-            iconClass="text-color-blue"
-            className="mb-4"
-          >
-            get in touch
-          </Button>
+          <LoadFileButton icon iconClass="text-color-blue" className="mb-16">
+            resume
+          </LoadFileButton>
 
-          <div className="w-fit flex justify-between items-center gap-3 mb-12">
+          {/* <div className="w-fit flex justify-between items-center gap-3 mb-12">
             <p className="body-1">designs you&apos;ll</p>
             <Heart weight="fill" className="text-color-pink" />
             <p className="body-1">, guaranteed.</p>
-          </div>
+          </div> */}
 
           <p className="body-1 text-color-grey opacity-80 text-sm mb-1">
             or find me on:
           </p>
-          <div className="flex justify-start items-center gap-8 -translate-x-1">
+          <div className="flex justify-start items-center gap-4 -translate-x-1">
             {contactInfo.instagram && (
               <IconButton
                 icon={

@@ -24,7 +24,7 @@ const Contact = () => {
         <div className="relative z-5">
           <h1 className="h1 mb-4">Get in touch</h1>
           <p className="body-1 mb-20">
-            We're thrilled that you're considering collaborating with us! If
+            I'm thrilled that you're considering collaborating with us! If
             you're ready to take your digital presence to new heights, let's get
             the ball rolling.
           </p>

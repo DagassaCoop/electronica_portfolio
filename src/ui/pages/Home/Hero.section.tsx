@@ -1,14 +1,12 @@
 // Components
-import Button from "@/ui/components/Button";
+import LoadFileButton from "@/ui/components/LoadFileButton";
+import Promo from "@/ui/components/Promo";
 
 // Assets
 import Branch from "@/assets/svg/Branch";
 import Hypotrochoid from "@/assets/svg/Hypotrochoid";
 import heroPerson from "@/assets/hero-person.png";
-
-// Icons
 import { Heart } from "@phosphor-icons/react";
-import Promo from "@/ui/components/Promo";
 
 const Hero = () => {
   return (
@@ -27,9 +25,7 @@ const Hero = () => {
         </p>
 
         <div className="flex gap-6 mt-16 mb-5">
-          <Button href="/contact" isRoute>
-            book a free call
-          </Button>
+          <LoadFileButton>resume</LoadFileButton>
           <Branch />
         </div>
         <div className="w-fit flex justify-between items-center gap-3">
@@ -40,9 +36,20 @@ const Hero = () => {
       </div>
 
       {/* Image */}
-      <div className="absolute pointer-events-none z-2 bottom-0 right-0 translate-x-1/3 translate-y-[4rem] md:translate-x-20 xl:overflow-hidden xl:w-[800px] xl:translate-x-[100px] xl:translate-y-0 2xl:right-40">
-        <div className="relative z-3 w-[650px] xl:w-full">
-          <img src={heroPerson} alt="person" className="relative z-3 w-full" />
+      <div className="absolute pointer-events-none z-2 bottom-0 right-0 translate-x-[20%] translate-y-[4rem] md:translate-x-20 xl:overflow-hidden xl:w-[800px] xl:translate-x-[100px] xl:translate-y-0 2xl:right-40">
+        <div className="relative z-3 flex justify-center w-[650px] xl:w-full">
+          <div className="w-[350px] lg:w-[400px] xl:w-[500px]">
+            <img
+              src={heroPerson}
+              alt="person"
+              className="hero-img relative z-3 w-full "
+              style={{
+                maskImage:
+                  "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)",
+              }}
+            />
+          </div>
+
           <div className="absolute inset-0 flex justify-center items-center translate-y-32 -translate-x-4 md:-translate-x-24 md:inset-6 xl:translate-x-0 xl:inset-0">
             <Hypotrochoid className="relative text-color-violet rotate-12" />
           </div>
