@@ -1,6 +1,5 @@
 // Entities
 import { INavLink } from "@/entities/NavLink";
-// import { IWork } from "@/entities/Work";
 import { ISliderItem } from "@/entities/SliderItem";
 
 // Icons
@@ -14,12 +13,6 @@ import {
   Clock,
   Flask,
 } from "@phosphor-icons/react";
-
-// Assets
-import work1 from "@/assets/video_creation_thumbnail_1.png";
-import work2 from "@/assets/video_creation_thumbnail_2.png";
-import work3 from "@/assets/video_creation_thumbnail_3.png";
-import work4 from "@/assets/video_creation_thumbnail_4.png";
 
 export const navLinks: INavLink[] = [
   {

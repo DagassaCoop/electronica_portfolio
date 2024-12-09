@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // Mock
-import { longVideos, shortVideos, photos, graphicDesigns } from "@/mock/works";
+import { longVideos, shortVideos } from "@/mock/works";
 
 // Components
 import Button from "@/ui/components/Button";
@@ -10,23 +10,18 @@ import Button from "@/ui/components/Button";
 import { Heart } from "@phosphor-icons/react";
 
 // Entities
-import { IWorkProject, TWorkType } from "@/entities/Work";
+import { IWorkProject, TWorkGroup } from "@/entities/Work";
 import WorkProject from "@/ui/components/WorkProject";
 
-const WORK_TYPES: TWorkType[] = [
-  "long video",
-  "short video",
-  "photo",
-  "graphic design",
-];
+const WORK_TYPES: TWorkGroup[] = ["long video", "short video"];
 
 const WorksSection = () => {
-  const [workGroup, setWorkGroup] = useState<TWorkType>("long video");
+  const [workGroup, setWorkGroup] = useState<TWorkGroup>("long video");
   const [works, setWorks] = useState<IWorkProject[]>(longVideos);
 
   console.log(works);
 
-  const handleWorkGroupUpdate = (groupName: TWorkType) => {
+  const handleWorkGroupUpdate = (groupName: TWorkGroup) => {
     setWorkGroup(groupName);
     switch (groupName) {
       case "long video":
@@ -35,12 +30,12 @@ const WorksSection = () => {
       case "short video":
         setWorks(shortVideos);
         break;
-      case "photo":
-        setWorks(photos);
-        break;
-      case "graphic design":
-        setWorks(graphicDesigns);
-        break;
+      // case "photo":
+      //   setWorks(photos);
+      //   break;
+      // case "graphic design":
+      //   setWorks(graphicDesigns);
+      //   break;
     }
   };
 
@@ -72,7 +67,12 @@ const WorksSection = () => {
         })}
       </div>
 
-      <div className="w-full grid xl:grid-cols-2 gap-14 mb-20">
+      <div
+        className={[
+          "w-full grid xl:grid-cols-2 gap-14 mb-20",
+          workGroup === "short video" ? "md:grid-cols-2 lg:grid-cols-3" : "",
+        ].join(" ")}
+      >
         {works.map((item) => {
           return <WorkProject project={item} key={item.id} />;
         })}

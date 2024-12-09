@@ -1,8 +1,10 @@
-export type TWorkType =
+export type TWorkGroup =
   | "long video"
   | "short video"
   | "photo"
   | "graphic design";
+
+export type TProjectTypes = "Product" | "Social media" | "Corporate" | "Event";
 
 interface IWorkBase {
   id: string;
@@ -15,7 +17,8 @@ export interface IWorkProject {
   title: string;
   description?: string;
   cover: string;
-  type: TWorkType;
+  group: TWorkGroup;
+  type: TProjectTypes;
   work: IVideo[] | IPhoto[];
 }
 
