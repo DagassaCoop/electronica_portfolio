@@ -1,6 +1,6 @@
 // Components
-import Button from "@/components/shared/Button";
-import Carousel from "@/components/shared/Carousel";
+import Button from "@/ui/components/Button";
+import Carousel from "@/ui/components/Carousel";
 
 // Assets
 import Hypotrochoid from "@/assets/svg/Hypotrochoid";

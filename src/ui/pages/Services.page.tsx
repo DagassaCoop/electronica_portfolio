@@ -2,7 +2,7 @@
 import { services } from "@/mock";
 
 // Components
-import Button from "../shared/Button";
+import Button from "../components/Button";
 
 // Assets
 import OlPoint from "@/assets/svg/OlPoint";

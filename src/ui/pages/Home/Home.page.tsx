@@ -1,7 +1,7 @@
 // Sections
 import Hero from "./Hero.section";
 import Works from "./Works.section";
-import Benefits from "@/components/shared/Benefits.section";
+import Benefits from "@/ui/components/Benefits.section";
 
 const Home = () => {
   return (

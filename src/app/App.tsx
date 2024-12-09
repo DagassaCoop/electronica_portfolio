@@ -3,8 +3,8 @@ import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 // Components
-import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
+import Header from "@/ui/components/Header";
+import Footer from "@/ui/components/Footer";
 
 const App = () => {
   const { pathname } = useLocation();

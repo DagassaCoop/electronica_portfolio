@@ -1,3 +1,9 @@
+export type TWorkType =
+  | "long video"
+  | "short video"
+  | "photo"
+  | "graphic design";
+
 interface IWorkBase {
   id: string;
   title: string;
@@ -9,7 +15,7 @@ export interface IWorkWrapper {
   title: string;
   description?: string;
   cover: string;
-  type: "long video" | "short video" | "photo" | "graphic design";
+  type: TWorkType;
   work: IVideo[] | IPhoto[];
 }
 

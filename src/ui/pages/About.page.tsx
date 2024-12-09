@@ -3,8 +3,8 @@ import { Heart, LinkedinLogo, InstagramLogo } from "@phosphor-icons/react";
 import person from "@/assets/about-person.webp";
 
 // Components
-import Button from "../shared/Button";
-import IconButton from "../shared/IconButton";
+import Button from "../components/Button";
+import IconButton from "../components/IconButton";
 
 // Mock
 import { contactInfo } from "@/mock";

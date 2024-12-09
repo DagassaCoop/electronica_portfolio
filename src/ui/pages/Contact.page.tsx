@@ -4,7 +4,7 @@ import { useState } from "react";
 import { contactInfo } from "@/mock";
 
 // Components
-import IconButton from "../shared/IconButton";
+import IconButton from "../components/IconButton";
 
 // Assets
 import { InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";

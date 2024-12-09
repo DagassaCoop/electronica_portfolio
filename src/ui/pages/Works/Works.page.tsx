@@ -1,6 +1,6 @@
 // Sections
 import WorksSection from "./Works.section";
-import Benefits from "@/components/shared/Benefits.section";
+import Benefits from "@/ui/components/Benefits.section";
 
 const Works = () => {
   return (

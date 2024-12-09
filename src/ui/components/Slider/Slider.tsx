@@ -38,8 +38,7 @@ const Slider: FC<ISliderProps> = ({ className }) => {
 
   const pagination = {
     clickable: true,
-    renderBullet: function (index: number, className: string) {
-      console.log(index, className);
+    renderBullet: function (_: any, className: string) {
       return '<span class="' + className + '"></span>';
     },
   };

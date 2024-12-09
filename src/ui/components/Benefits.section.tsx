@@ -1,6 +1,6 @@
 // Components
-import Button from "../shared/Button";
-import Slider from "../shared/Slider/Slider";
+import Button from "../components/Button";
+import Slider from "../components/Slider/Slider";
 
 const Benefits = () => {
   return (

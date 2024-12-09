@@ -11,8 +11,6 @@ const VideoPlayer: FC<IVideoPlayerProps> = ({ options, onReady }) => {
   const videoRef = useRef<any>(null);
   const playerRef = useRef<any>(null);
 
-  // const options = {};
-
   useEffect(() => {
     // Initialize Video.js player
     if (!playerRef.current) {
@@ -20,7 +18,7 @@ const VideoPlayer: FC<IVideoPlayerProps> = ({ options, onReady }) => {
 
       if (videoElement) {
         const player = videojs(videoElement, options, () => {
-          console.log("Player is ready");
+          // console.log("Player is ready");
           if (onReady) {
             onReady(player);
           }

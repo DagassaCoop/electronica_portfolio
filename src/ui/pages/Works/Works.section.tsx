@@ -1,13 +1,27 @@
+import { useState } from "react";
+
 // Mock
 import { works } from "@/mock";
+import { longVideos } from "@/mock/works";
 
 // Components
-import Button from "@/components/shared/Button";
+import Button from "@/ui/components/Button";
 
 // Assets
 import { Heart } from "@phosphor-icons/react";
 
+// Entities
+import { TWorkType } from "@/entities/Work";
+
 const WorksSection = () => {
+  const workTypes: TWorkType[] = [
+    "long video",
+    "short video",
+    "photo",
+    "graphic design",
+  ];
+  const [workGroup, setWorkGroup] = useState<TWorkType>("long video");
+
   return (
     <section id="works" className="relative container pt-12 pb-24">
       <h1 className="h1 mb-4">Past works</h1>
@@ -16,6 +30,26 @@ const WorksSection = () => {
         of their offering and making them stand out both in their field, and in
         the real world.
       </p>
+
+      <div className="grid grid-cols-2 max-sm:gap-4 sm:flex justify-around items-center w-full h-auto mb-8">
+        {workTypes.map((item) => {
+          return (
+            <button
+              key={item}
+              className={[
+                "font-trap px-4 py-2 border-2 rounded-md border-color-grey hover:border-color-blue transition ease-in-out",
+                item === workGroup
+                  ? "bg-color-blue text-white border-color-blue"
+                  : "",
+              ].join(" ")}
+              onClick={() => setWorkGroup(item)}
+            >
+              {item}
+            </button>
+          );
+        })}
+      </div>
+
       <div className="w-full grid xl:grid-cols-2 gap-14 mb-20">
         {works.map((item) => {
           return (

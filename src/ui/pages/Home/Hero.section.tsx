@@ -1,5 +1,5 @@
 // Components
-import Button from "@/components/shared/Button";
+import Button from "@/ui/components/Button";
 
 // Assets
 import Branch from "@/assets/svg/Branch";
@@ -8,7 +8,7 @@ import heroPerson from "@/assets/hero-person.png";
 
 // Icons
 import { Heart } from "@phosphor-icons/react";
-import Promo from "@/components/shared/Promo";
+import Promo from "@/ui/components/Promo";
 
 const Hero = () => {
   return (

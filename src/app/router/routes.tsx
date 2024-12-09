@@ -2,11 +2,11 @@ import { RouteObject } from "react-router-dom";
 
 // Components
 import App from "../App";
-import Home from "@/components/pages/Home/Home.page";
-import About from "@/components/pages/About.page";
-import Works from "@/components/pages/Works/Works.page";
-import Services from "@/components/pages/Services.page";
-import Contact from "@/components/pages/Contact.page";
+import Home from "@/ui/pages/Home/Home.page";
+import About from "@/ui/pages/About.page";
+import Works from "@/ui/pages/Works/Works.page";
+import Services from "@/ui/pages/Services.page";
+import Contact from "@/ui/pages/Contact.page";
 
 const routes: RouteObject[] = [
   {

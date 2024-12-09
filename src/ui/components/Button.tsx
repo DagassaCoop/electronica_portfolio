@@ -43,8 +43,6 @@ const Button: FC<IButtonProps> = ({
     getColors(),
   ].join(" ");
 
-  console.log(classes);
-
   const span = <span className="body-1 font-bold">{children}</span>;
   const iconEl = (
     <PulseLines className={["absolute -right-5 -top-4", iconClass].join(" ")} />
