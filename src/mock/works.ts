@@ -179,7 +179,7 @@ export const shortVideos: IWorkProject[] = [
 export const longVideos: IWorkProject[] = [
   {
     id: "b8d3ac8f-bcb6-4db7-b015-6ccd66597831",
-    title: "Staying Relevant in Sales",
+    title: "Staying Relevant in Sales p.1",
     description:
       "A long-form educational videos created for the company’s training platform.",
     cover: salesTrainingCover,
@@ -193,6 +193,24 @@ export const longVideos: IWorkProject[] = [
         source: salesTrainingVideo,
         type: "mp4",
       },
+      {
+        id: "02063fd9-1fe1-4fb6-a065-af91b637d2b4",
+        title: "Sales Perspective",
+        cover: salesPerspectiveCover,
+        source: salesPerspectiveVideo,
+        type: "mp4",
+      },
+    ] as IVideo[],
+  },
+  {
+    id: "9bed3edf-3399-4d6d-8352-2392defe524c",
+    title: "Staying Relevant in Sales p.2",
+    description:
+      "A long-form educational videos created for the company’s training platform.",
+    cover: salesPerspectiveCover,
+    group: "long video",
+    type: "Corporate",
+    work: [
       {
         id: "02063fd9-1fe1-4fb6-a065-af91b637d2b4",
         title: "Sales Perspective",

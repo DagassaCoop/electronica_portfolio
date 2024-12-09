@@ -20,7 +20,7 @@ const Modal: FC<IModalProps> = ({ children, show, setShow }) => {
       {show &&
         createPortal(
           <div className="absolute top-0 bottom-0 left-0 right-0 w-screen h-screen bg-color-black/75 z-[100] flex justify-center items-center">
-            <div className="relative w-[80%] max-h-[80%] overflow-hidden bg-color-kidnapper rounded-2xl flex justify-center items-center p-10">
+            <div className="relative w-fit h-fit overflow-hidden bg-color-kidnapper rounded-2xl flex justify-center items-center p-10">
               <IconButton
                 icon={<X />}
                 onClick={() => setShow(false)}

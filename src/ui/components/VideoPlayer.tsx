@@ -8,7 +8,6 @@ const VideoPlayer: FC<ReactPlayerProps> = ({ url, ...props }) => {
     <ReactPlayer
       ref={videoRef}
       url={url}
-      width="100%"
       playing
       controls
       {...props}
