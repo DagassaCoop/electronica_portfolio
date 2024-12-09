@@ -19,8 +19,6 @@ const WorksSection = () => {
   const [workGroup, setWorkGroup] = useState<TWorkGroup>("long video");
   const [works, setWorks] = useState<IWorkProject[]>(longVideos);
 
-  console.log(works);
-
   const handleWorkGroupUpdate = (groupName: TWorkGroup) => {
     setWorkGroup(groupName);
     switch (groupName) {

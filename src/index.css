@@ -25,9 +25,10 @@
 }
 
 body {
+  position: relative;
   width: 100dvw;
-  overflow-x: hidden;
-  height: 100%;
+  overflow: hidden;
+  height: 100vh;
   border-color: #3b3b3b;
   user-select: none;
 }
@@ -35,6 +36,11 @@ body {
 :root {
   --font-poppins: "Poppins", sans-serif;
   --font-trap: "Trap", sans-serif;
+}
+
+#root {
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 * {

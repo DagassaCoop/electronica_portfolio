@@ -1,20 +1,30 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 
 // Entities
 import { IWorkProject } from "@/entities/Work";
+
+// Components
+import Modal from "./Modal";
+import VideoPlayer from "./VideoPlayer";
 
 interface IWorkItemProps {
   project: IWorkProject;
 }
 
 const WorkItem: FC<IWorkItemProps> = ({ project }) => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div
       key={project.id}
       className="works-item group flex flex-col justify-between w-full max-h-screen border-[3px] border-color-grey rounded-3xl px-7 pt-7 pb-8 transition ease-in-out hover:bg-color-blue hover:text-white hover:border-color-blue"
     >
-      <div className="flex justify-center items-center border-[3px] border-color-grey rounded-3xl mb-16 overflow-hidden transition ease-in-out cursor-pointer group-hover:scale-[102.5%]">
+      <div
+        onClick={() => setShowModal(true)}
+        className="flex justify-center items-center border-[3px] border-color-grey rounded-3xl mb-16 overflow-hidden transition ease-in-out cursor-pointer group-hover:scale-[102.5%]"
+      >
         <img src={project.cover} alt={project.title} className="scale-[101%]" />
+        {/* <VideoPlayer options={videoJsOptions} onReady={handlePlayerReady} /> */}
       </div>
       <div className="flex flex-col justify-between flex-1">
         <div>
@@ -26,6 +36,9 @@ const WorkItem: FC<IWorkItemProps> = ({ project }) => {
 
         <p className="body-1">{project.description}</p>
       </div>
+      <Modal id={"modal_" + project.id} show={showModal} setShow={setShowModal}>
+        <VideoPlayer url={project.work[0].source} />
+      </Modal>
     </div>
   );
 };

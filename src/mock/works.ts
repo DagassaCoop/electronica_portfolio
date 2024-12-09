@@ -33,16 +33,16 @@ import lkVideo from "../assets/portfolio/long form/LK video.mov";
 import canvasEventVideo from "../assets/portfolio/long form/Canvas painting.mov";
 
 //  Graphic Designs
-// import billboard_1 from "../assets/portfolio/graphic design/billboard 1.png";
-// import billboard_2 from "../assets/portfolio/graphic design/billboard 2.png";
-// import billboard_3 from "../assets/portfolio/graphic design/billboard 3.png";
-// import clinic_1 from "../assets/portfolio/graphic design/1.png";
-// import clinic_2 from "../assets/portfolio/graphic design/2.png";
-// import clinic_3 from "../assets/portfolio/graphic design/3.png";
-// import clinic_4 from "../assets/portfolio/graphic design/4.png";
-// import clinic_5 from "../assets/portfolio/graphic design/5.png";
-// import clinic_6 from "../assets/portfolio/graphic design/6.png";
-// import clinic_7 from "../assets/portfolio/graphic design/7.png";
+import billboard_1 from "../assets/portfolio/graphic design/billboard 1.png";
+import billboard_2 from "../assets/portfolio/graphic design/billboard 2.png";
+import billboard_3 from "../assets/portfolio/graphic design/billboard 3.png";
+import clinic_1 from "../assets/portfolio/graphic design/1.png";
+import clinic_2 from "../assets/portfolio/graphic design/2.png";
+import clinic_3 from "../assets/portfolio/graphic design/3.png";
+import clinic_4 from "../assets/portfolio/graphic design/4.png";
+import clinic_5 from "../assets/portfolio/graphic design/5.png";
+import clinic_6 from "../assets/portfolio/graphic design/6.png";
+import clinic_7 from "../assets/portfolio/graphic design/7.png";
 
 //   Photos
 // import christmas_1 from "../assets/portfolio/photos/IMG_3867 2.jpg";
@@ -52,31 +52,6 @@ import canvasEventVideo from "../assets/portfolio/long form/Canvas painting.mov"
 // import christmas_5 from "../assets/portfolio/photos/IMG_3941 2.jpg";
 
 export const shortVideos: IWorkProject[] = [
-  {
-    id: "2c31860c-335b-49ac-be88-16645e0a6520",
-    title: "Cosmetic brands: Simplicity in Focus",
-    description:
-      "Clean and simple reels I created to highlight brands’ beauty and transparency.",
-    cover: ordinaryCover,
-    group: "short video",
-    type: "Product",
-    work: [
-      {
-        id: "b8102e6c-663f-46db-ad19-e9caf0625d41",
-        title: "Ordinary",
-        cover: ordinaryCover,
-        source: ordinaryVideo,
-        type: "mov",
-      },
-      {
-        id: "0c140f87-36e9-4c01-aee7-0cff0557666c",
-        title: "Olaplex",
-        cover: olaplexCover,
-        source: olaplexVideo,
-        type: "mp4",
-      },
-    ] as IVideo[],
-  },
   {
     id: "e2c7554f-6805-407a-a2d7-fe858f2e19e4",
     title: "Strength in Every Rep",
@@ -174,6 +149,31 @@ export const shortVideos: IWorkProject[] = [
       },
     ] as IVideo[],
   },
+  {
+    id: "2c31860c-335b-49ac-be88-16645e0a6520",
+    title: "Cosmetic brands: Simplicity in Focus",
+    description:
+      "Clean and simple reels I created to highlight brands’ beauty and transparency.",
+    cover: ordinaryCover,
+    group: "short video",
+    type: "Product",
+    work: [
+      {
+        id: "0c140f87-36e9-4c01-aee7-0cff0557666c",
+        title: "Olaplex",
+        cover: olaplexCover,
+        source: olaplexVideo,
+        type: "mp4",
+      },
+      {
+        id: "b8102e6c-663f-46db-ad19-e9caf0625d41",
+        title: "Ordinary",
+        cover: ordinaryCover,
+        source: ordinaryVideo,
+        type: "mov",
+      },
+    ] as IVideo[],
+  },
 ];
 
 export const longVideos: IWorkProject[] = [
@@ -258,79 +258,79 @@ export const longVideos: IWorkProject[] = [
   },
 ];
 
-// export const graphicDesigns: IWorkProject[] = [
-//   {
-//     id: "1bb39310-8eee-48a0-b4a3-1c6fb164d734",
-//     title: "​​Billboards for Chocolate Brand",
-//     description: "Billboard designs created to promote a chocolate brand.",
-//     cover: billboard_1,
-//     group: "graphic design",
-//     type: "Product",
-//     work: [
-//       {
-//         id: "88d59a87-a056-487b-a7c1-dc3bf38e21ee",
-//         title: "Billboard 1",
-//         source: billboard_1,
-//       },
-//       {
-//         id: "333100e9-e83b-4ec8-9a77-77e00de6eaf4",
-//         title: "Billboard 2",
-//         source: billboard_2,
-//       },
-//       {
-//         id: "dd5e67f2-c8b7-4b28-a316-f0e8b880ebca",
-//         title: "Billboard 3",
-//         source: billboard_3,
-//       },
-//     ] as IPhoto[],
-//   },
-//   {
-//     id: "eb1fc655-9b4b-4c65-8d39-6e5ab789e67d",
-//     title: "Meet the Team' Instagram Posts for Dental Clinic",
-//     description:
-//       "A set of Instagram visuals designed for a dental clinic's 'Meet the Team' series.",
-//     cover: clinic_1,
-//     group: "graphic design",
-//     type: "Social media",
-//     work: [
-//       {
-//         id: "b08255c9-d879-4106-893a-469613e73860",
-//         title: "Clinic 1",
-//         source: clinic_1,
-//       },
-//       {
-//         id: "3f89e16a-d5bb-4973-894b-d4e6ff714388",
-//         title: "Clinic 2",
-//         source: clinic_2,
-//       },
-//       {
-//         id: "8d67bdbf-c25c-4294-a18b-039200a03115",
-//         title: "Clinic 3",
-//         source: clinic_3,
-//       },
-//       {
-//         id: "44c2e933-a7a3-4c65-8a98-c494a6b14854",
-//         title: "Clinic 4",
-//         source: clinic_4,
-//       },
-//       {
-//         id: "b23db386-f6f0-43e0-9278-c46644bfa671",
-//         title: "Clinic 5",
-//         source: clinic_5,
-//       },
-//       {
-//         id: "c2063c94-54f1-411d-a1e4-07a33c2e96ea",
-//         title: "Clinic 6",
-//         source: clinic_6,
-//       },
-//       {
-//         id: "28cf6468-e9d9-4816-a56b-17498ded028c",
-//         title: "Clinic 7",
-//         source: clinic_7,
-//       },
-//     ] as IPhoto[],
-//   },
-// ];
+export const graphicDesigns: IWorkProject[] = [
+  {
+    id: "1bb39310-8eee-48a0-b4a3-1c6fb164d734",
+    title: "​​Billboards for Chocolate Brand",
+    description: "Billboard designs created to promote a chocolate brand.",
+    cover: billboard_1,
+    group: "graphic design",
+    type: "Product",
+    work: [
+      {
+        id: "88d59a87-a056-487b-a7c1-dc3bf38e21ee",
+        title: "Billboard 1",
+        source: billboard_1,
+      },
+      {
+        id: "333100e9-e83b-4ec8-9a77-77e00de6eaf4",
+        title: "Billboard 2",
+        source: billboard_2,
+      },
+      {
+        id: "dd5e67f2-c8b7-4b28-a316-f0e8b880ebca",
+        title: "Billboard 3",
+        source: billboard_3,
+      },
+    ] as IPhoto[],
+  },
+  {
+    id: "eb1fc655-9b4b-4c65-8d39-6e5ab789e67d",
+    title: "Meet the Team' Instagram Posts for Dental Clinic",
+    description:
+      "A set of Instagram visuals designed for a dental clinic's 'Meet the Team' series.",
+    cover: clinic_1,
+    group: "graphic design",
+    type: "Social media",
+    work: [
+      {
+        id: "b08255c9-d879-4106-893a-469613e73860",
+        title: "Clinic 1",
+        source: clinic_1,
+      },
+      {
+        id: "3f89e16a-d5bb-4973-894b-d4e6ff714388",
+        title: "Clinic 2",
+        source: clinic_2,
+      },
+      {
+        id: "8d67bdbf-c25c-4294-a18b-039200a03115",
+        title: "Clinic 3",
+        source: clinic_3,
+      },
+      {
+        id: "44c2e933-a7a3-4c65-8a98-c494a6b14854",
+        title: "Clinic 4",
+        source: clinic_4,
+      },
+      {
+        id: "b23db386-f6f0-43e0-9278-c46644bfa671",
+        title: "Clinic 5",
+        source: clinic_5,
+      },
+      {
+        id: "c2063c94-54f1-411d-a1e4-07a33c2e96ea",
+        title: "Clinic 6",
+        source: clinic_6,
+      },
+      {
+        id: "28cf6468-e9d9-4816-a56b-17498ded028c",
+        title: "Clinic 7",
+        source: clinic_7,
+      },
+    ] as IPhoto[],
+  },
+];
 
 // export const photos: IWorkProject[] = [
 //   {
