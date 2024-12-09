@@ -10,7 +10,7 @@ interface IWorkBase {
   source: string;
 }
 
-export interface IWorkWrapper {
+export interface IWorkProject {
   id: string;
   title: string;
   description?: string;

@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 // Mock
-import { works } from "@/mock";
-import { longVideos } from "@/mock/works";
+import { longVideos, shortVideos, photos, graphicDesigns } from "@/mock/works";
 
 // Components
 import Button from "@/ui/components/Button";
@@ -11,16 +10,39 @@ import Button from "@/ui/components/Button";
 import { Heart } from "@phosphor-icons/react";
 
 // Entities
-import { TWorkType } from "@/entities/Work";
+import { IWorkProject, TWorkType } from "@/entities/Work";
+import WorkProject from "@/ui/components/WorkProject";
+
+const WORK_TYPES: TWorkType[] = [
+  "long video",
+  "short video",
+  "photo",
+  "graphic design",
+];
 
 const WorksSection = () => {
-  const workTypes: TWorkType[] = [
-    "long video",
-    "short video",
-    "photo",
-    "graphic design",
-  ];
   const [workGroup, setWorkGroup] = useState<TWorkType>("long video");
+  const [works, setWorks] = useState<IWorkProject[]>(longVideos);
+
+  console.log(works);
+
+  const handleWorkGroupUpdate = (groupName: TWorkType) => {
+    setWorkGroup(groupName);
+    switch (groupName) {
+      case "long video":
+        setWorks(longVideos);
+        break;
+      case "short video":
+        setWorks(shortVideos);
+        break;
+      case "photo":
+        setWorks(photos);
+        break;
+      case "graphic design":
+        setWorks(graphicDesigns);
+        break;
+    }
+  };
 
   return (
     <section id="works" className="relative container pt-12 pb-24">
@@ -32,7 +54,7 @@ const WorksSection = () => {
       </p>
 
       <div className="grid grid-cols-2 max-sm:gap-4 sm:flex justify-around items-center w-full h-auto mb-8">
-        {workTypes.map((item) => {
+        {WORK_TYPES.map((item) => {
           return (
             <button
               key={item}
@@ -42,7 +64,7 @@ const WorksSection = () => {
                   ? "bg-color-blue text-white border-color-blue"
                   : "",
               ].join(" ")}
-              onClick={() => setWorkGroup(item)}
+              onClick={() => handleWorkGroupUpdate(item)}
             >
               {item}
             </button>
@@ -52,21 +74,7 @@ const WorksSection = () => {
 
       <div className="w-full grid xl:grid-cols-2 gap-14 mb-20">
         {works.map((item) => {
-          return (
-            <div
-              key={item.id}
-              className="works-item group w-full border-[3px] border-color-grey rounded-3xl px-7 pt-7 pb-8 transition ease-in-out hover:bg-color-blue hover:text-white hover:border-color-blue"
-            >
-              <div className="border-[3px] border-color-grey rounded-3xl mb-16 overflow-hidden transition ease-in-out cursor-pointer group-hover:scale-[102.5%]">
-                <img src={item.img} alt={item.title} />
-              </div>
-              <h2 className="h2 mb-4">{item.title}</h2>
-              <p className="body-1 text-color-grey mb-12 group-hover:text-color-greyLight">
-                {item.date.toDateString()}
-              </p>
-              <p className="body-1">{item.description}</p>
-            </div>
-          );
+          return <WorkProject project={item} key={item.id} />;
         })}
       </div>
       <div>

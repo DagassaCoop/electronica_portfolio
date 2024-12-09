@@ -49,45 +49,6 @@ export const navLinks: INavLink[] = [
   },
 ];
 
-export const works = [
-  {
-    id: "1",
-    title: "Title 1",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident laboriosam a quos repudiandae voluptatum, maxime impedit sit mollitia necessitatibus corrupti enim quas! Suscipit facere ad quod tempore labore ab sit.",
-    img: work1,
-    date: new Date(),
-    link: "",
-  },
-  {
-    id: "2",
-    title: "Title 2",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident laboriosam a quos repudiandae voluptatum, maxime impedit sit mollitia necessitatibus corrupti enim quas! Suscipit facere ad quod tempore labore ab sit.",
-    img: work2,
-    date: new Date(),
-    link: "",
-  },
-  {
-    id: "3",
-    title: "Title 3",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident laboriosam a quos repudiandae voluptatum, maxime impedit sit mollitia necessitatibus corrupti enim quas! Suscipit facere ad quod tempore labore ab sit.",
-    img: work3,
-    date: new Date(),
-    link: "",
-  },
-  {
-    id: "4",
-    title: "Title 4",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident laboriosam a quos repudiandae voluptatum, maxime impedit sit mollitia necessitatibus corrupti enim quas! Suscipit facere ad quod tempore labore ab sit.",
-    img: work4,
-    date: new Date(),
-    link: "",
-  },
-];
-
 export const sliderItems: ISliderItem[] = [
   {
     id: "1",
