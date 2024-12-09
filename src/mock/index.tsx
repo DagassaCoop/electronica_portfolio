@@ -1,6 +1,6 @@
 // Entities
 import { INavLink } from "@/entities/NavLink";
-import { IWork } from "@/entities/Work";
+// import { IWork } from "@/entities/Work";
 import { ISliderItem } from "@/entities/SliderItem";
 
 // Icons
@@ -49,7 +49,7 @@ export const navLinks: INavLink[] = [
   },
 ];
 
-export const works: IWork[] = [
+export const works = [
   {
     id: "1",
     title: "Title 1",
