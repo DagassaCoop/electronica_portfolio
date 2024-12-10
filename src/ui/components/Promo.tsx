@@ -21,7 +21,7 @@ const Promo: FC<IPromoProps> = ({ className }) => {
     >
       <div className="text-white flex justify-between">
         <h3 className="font-trap font-bold text-2xl">
-          Let&apos;s discuss upgrades,free of charge!
+          Bring your ideas <br /> to life.
         </h3>
         <div>
           <IconButton

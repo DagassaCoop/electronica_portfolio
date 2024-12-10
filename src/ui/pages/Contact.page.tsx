@@ -22,12 +22,7 @@ const Contact = () => {
     <>
       <section id="contact" className="relative container pt-12 pb-20">
         <div className="relative z-5">
-          <h1 className="h1 mb-4">Get in touch</h1>
-          <p className="body-1 mb-20">
-            I'm thrilled that you're considering collaborating with us! If
-            you're ready to take your digital presence to new heights, let's get
-            the ball rolling.
-          </p>
+          <h1 className="h1 mb-16">Get in touch</h1>
           <form
             onSubmit={onSubmit}
             className="mb-12 flex flex-col w-full gap-6"

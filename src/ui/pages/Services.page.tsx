@@ -18,16 +18,16 @@ const Services = () => {
       >
         <div className="relative z-5 flex flex-col mb-32 min-[1200px]:mb-0 w-[450px] xl:w-[500px]">
           <h1 className="h1 mb-4">Services</h1>
-          <p className="body-2 mb-14">
+          {/* <p className="font-trap font-no mb-14">
             Whether you're a startup seeking a captivating brand identity, a
             business looking to elevate your web presence, I've got you covered.
-          </p>
+          </p> */}
           <ol className="mb-10">
             {services.map((item, index) => {
               return (
                 <li
                   key={index}
-                  className="body-1 text-2xl font-medium border-b-color-grey border-b-2 py-5 flex gap-5"
+                  className="body-1 font-trap text-2xl font-medium border-b-color-grey border-b-2 py-5 flex gap-5"
                 >
                   <OlPoint />
                   {item}
@@ -35,10 +35,6 @@ const Services = () => {
               );
             })}
           </ol>
-          <p className="body-2 mb-4">
-            I tailor your experience to your specific needs, if you’d like to
-            hear more, hop on a free call with us.
-          </p>
           <Button href="/works" isRoute>
             see my experience
           </Button>

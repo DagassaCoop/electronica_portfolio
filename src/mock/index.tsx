@@ -9,9 +9,9 @@ import {
   FilmReel,
   Suitcase,
   PaperPlaneTilt,
-  MagicWand,
-  Clock,
-  Flask,
+  LightbulbFilament,
+  FilmSlate,
+  PencilSimpleLine,
 } from "@phosphor-icons/react";
 
 export const navLinks: INavLink[] = [
@@ -45,11 +45,11 @@ export const navLinks: INavLink[] = [
 export const sliderItems: ISliderItem[] = [
   {
     id: "1",
-    title: "Magical, fairy-tale results.",
+    title: "Idea development.",
     description:
-      "Unbelievable track record that breaks records on the regular.",
+      "Transforming visions into clear plans with creative ideas and strategies that bring stories to life.",
     icon: (
-      <MagicWand
+      <LightbulbFilament
         weight="fill"
         width={48}
         height={48}
@@ -61,11 +61,11 @@ export const sliderItems: ISliderItem[] = [
   },
   {
     id: "2",
-    title: "On time service.",
+    title: "Filming.",
     description:
-      "I deliver fast. Often times design is slower than it needs to be. I deliver in 1-2 days.",
+      "Capturing moments with care and attention to detail to bring ideas to life on camera.",
     icon: (
-      <Clock
+      <FilmSlate
         weight="fill"
         width={48}
         height={48}
@@ -77,11 +77,11 @@ export const sliderItems: ISliderItem[] = [
   },
   {
     id: "3",
-    title: "Researched and tested.",
+    title: "Editing.",
     description:
-      "Unbelievable track record that breaks records on the regular.",
+      "Turning raw footage into polished, engaging videos that tell stories beautifully..",
     icon: (
-      <Flask
+      <PencilSimpleLine
         weight="fill"
         width={48}
         height={48}

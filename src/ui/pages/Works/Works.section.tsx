@@ -22,23 +22,12 @@ const WorksSection = () => {
       case "short video":
         setWorks(shortVideos);
         break;
-      // case "photo":
-      //   setWorks(photos);
-      //   break;
-      // case "graphic design":
-      //   setWorks(graphicDesigns);
-      //   break;
     }
   };
 
   return (
     <section id="works" className="relative container pt-12 pb-24">
-      <h1 className="h1 mb-4">Past works</h1>
-      <p className="body-1 mb-16">
-        Here are some our past projects. I take care in bringing the best out of
-        their offering and making them stand out both in their field, and in the
-        real world.
-      </p>
+      <h1 className="h1 mb-16">Past works</h1>
 
       <div className="grid grid-cols-2 max-sm:gap-4 sm:flex justify-around items-center w-full h-auto mb-8">
         {WORK_TYPES.map((item) => {
@@ -64,22 +53,6 @@ const WorksSection = () => {
           return <WorkProject project={item} key={item.id} />;
         })}
       </div>
-      {/* <div>
-        <p className="body-1 mb-4">Want to collaborate on a future project?</p>
-        <Button
-          href="/contact"
-          isRoute
-          variant="blue"
-          className="mb-5 py-4 px-12"
-        >
-          get in touch
-        </Button>
-        <div className="w-fit flex justify-between items-center gap-3">
-          <p className="body-1">designs you&apos;ll</p>
-          <Heart weight="fill" className="text-color-pink" />
-          <p className="body-1">, guaranteed.</p>
-        </div>
-      </div> */}
     </section>
   );
 };

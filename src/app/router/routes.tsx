@@ -1,4 +1,4 @@
-import { RouteObject } from "react-router-dom";
+import { redirect, RouteObject } from "react-router-dom";
 
 // Components
 import App from "../App";
@@ -32,6 +32,10 @@ const routes: RouteObject[] = [
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/*",
+        loader: () => redirect("/"),
       },
     ],
   },

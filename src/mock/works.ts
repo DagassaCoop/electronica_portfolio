@@ -13,7 +13,7 @@ import wrapItUpCover from "../assets/portfolio/covers/WRAP IT UP.png";
 import riverClinicCover from "../assets/portfolio/covers/WELCOME TO THE CLINIC.png";
 import salesTrainingCover from "../assets/portfolio/covers/Staying Relevant in Sales.png";
 import salesPerspectiveCover from "../assets/portfolio/covers/Sales perspective.png";
-import mindfulEatingCover from "../assets/portfolio/covers/Mindful eating .png";
+import mindfulEatingCover from "../assets/portfolio/covers/Mindful eating.png";
 import lkCover from "../assets/portfolio/covers/Software launch.png";
 import canvasEventCover from "../assets/portfolio/covers/Canvas painting.png";
 

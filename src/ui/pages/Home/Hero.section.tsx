@@ -6,7 +6,6 @@ import Promo from "@/ui/components/Promo";
 import Branch from "@/assets/svg/Branch";
 import Hypotrochoid from "@/assets/svg/Hypotrochoid";
 import heroPerson from "@/assets/hero-person.png";
-import { Heart } from "@phosphor-icons/react";
 
 const Hero = () => {
   return (
@@ -20,18 +19,13 @@ const Hero = () => {
           I&apos;m Sasha. Videographer, professional content creator.
         </h1>
         <p className="body-1">
-          Building unique brands and visual experiences to bring out the best in
-          what you offer.
+          Creating videos from start to finish, turning ideas into engaging
+          stories that connect with your audience.
         </p>
 
         <div className="flex gap-6 mt-16 mb-5">
           <LoadFileButton>resume</LoadFileButton>
           <Branch />
-        </div>
-        <div className="w-fit flex justify-between items-center gap-3">
-          <p className="body-1">designs you&apos;ll</p>
-          <Heart weight="fill" className="text-color-pink" />
-          <p className="body-1">, guaranteed.</p>
         </div>
       </div>
 

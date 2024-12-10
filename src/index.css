@@ -2,6 +2,13 @@
 
 @font-face {
   font-family: "Trap";
+  src: local("Trap-Regular"), url("./assets/fonts/Trap/Trap-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Trap";
   src: local("Trap-ExtraBold"), url("./assets/fonts/Trap/Trap-ExtraBold.otf");
   font-weight: 800;
   font-style: normal;
