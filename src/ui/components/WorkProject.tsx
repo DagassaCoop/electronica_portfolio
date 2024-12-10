@@ -23,7 +23,11 @@ const WorkItem: FC<IWorkItemProps> = ({ project }) => {
         onClick={() => setShowModal(true)}
         className="max-h-[60vh] flex justify-center items-center border-[3px] border-color-grey rounded-3xl mb-16 overflow-hidden transition ease-in-out cursor-pointer group-hover:scale-[102.5%]"
       >
-        <img src={project.cover} alt={project.title} className="scale-[101%]" />
+        <img
+          src={project.cover}
+          alt={project.title}
+          className="scale-[101%] w-full"
+        />
       </div>
       <div className="flex flex-col justify-between flex-1">
         <div>

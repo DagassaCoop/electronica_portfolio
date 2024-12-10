@@ -3,12 +3,6 @@ import { useState } from "react";
 // Mock
 import { longVideos, shortVideos } from "@/mock/works";
 
-// Components
-import Button from "@/ui/components/Button";
-
-// Assets
-import { Heart } from "@phosphor-icons/react";
-
 // Entities
 import { IWorkProject, TWorkGroup } from "@/entities/Work";
 import WorkProject from "@/ui/components/WorkProject";

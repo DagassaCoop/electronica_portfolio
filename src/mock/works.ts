@@ -17,21 +17,6 @@ import mindfulEatingCover from "../assets/portfolio/covers/Mindful eating .png";
 import lkCover from "../assets/portfolio/covers/Software launch.png";
 import canvasEventCover from "../assets/portfolio/covers/Canvas painting.png";
 
-//  Sources
-import olaplexVideo from "../assets/portfolio/short form/Olaplex.mp4";
-import ordinaryVideo from "../assets/portfolio/short form/Ordinary.mov";
-import whyDoILiftVideo from "../assets/portfolio/short form/Why do i lift.mov";
-import fancyDrinkVideo from "../assets/portfolio/short form/Fancy a drink.mp4";
-import rootCanalVideo from "../assets/portfolio/short form/root canal (dental clinic).mov";
-import winterDrinkVideo from "../assets/portfolio/short form/Perfect winter drink.mp4";
-import wrapItUpVideo from "../assets/portfolio/short form/Wrap it up!.mov";
-import riverClinicVideo from "../assets/portfolio/short form/Welcome to River St Endo.mov";
-import salesTrainingVideo from "../assets/portfolio/long form/Sales training video.mp4";
-import salesPerspectiveVideo from "../assets/portfolio/long form/Monthly revenue (sales perspective).mp4";
-import mindfulEatingVideo from "../assets/portfolio/long form/Mindful eating.mov";
-import lkVideo from "../assets/portfolio/long form/LK video.mov";
-import canvasEventVideo from "../assets/portfolio/long form/Canvas painting.mov";
-
 //  Graphic Designs
 import billboard_1 from "../assets/portfolio/graphic design/billboard 1.png";
 import billboard_2 from "../assets/portfolio/graphic design/billboard 2.png";
@@ -65,7 +50,7 @@ export const shortVideos: IWorkProject[] = [
         id: "8b7de276-379d-4530-a6be-0faa40a34f67",
         title: "Strength in Every Rep",
         cover: whyDoILiftCover,
-        source: whyDoILiftVideo,
+        source: "why-do-i-lift.mov",
         type: "mov",
       },
     ] as IVideo[],
@@ -83,7 +68,7 @@ export const shortVideos: IWorkProject[] = [
         id: "5ff98cd2-db44-4642-b112-279619f78e06",
         title: "Fancy a drink",
         cover: fancyDrinkCover,
-        source: fancyDrinkVideo,
+        source: "fancy-a-drink.mp4",
         type: "mp4",
       },
     ] as IVideo[],
@@ -101,7 +86,7 @@ export const shortVideos: IWorkProject[] = [
         id: "ab7d7f70-11c0-4282-a837-663095b4b2e9",
         title: "Root Canal",
         cover: rootCanalCover,
-        source: rootCanalVideo,
+        source: "root-canal-dental-clinic.mov",
         type: "mov",
       },
     ] as IVideo[],
@@ -119,14 +104,14 @@ export const shortVideos: IWorkProject[] = [
         id: "cd973a88-42a0-481e-92b7-bff2be9ff5d6",
         title: "Perfect Winter Drink",
         cover: winterDrinkCover,
-        source: winterDrinkVideo,
+        source: "perfect-winter-drink.mp4",
         type: "mp4",
       },
       {
         id: "a3758a80-224c-48dd-913c-b2b469ed4bf0",
         title: "Wrap it up",
         cover: wrapItUpCover,
-        source: wrapItUpVideo,
+        source: "wrap-it-up.mov",
         type: "mov",
       },
     ] as IVideo[],
@@ -144,7 +129,7 @@ export const shortVideos: IWorkProject[] = [
         id: "4e1ba132-1a4e-477b-ab5a-032f3db97d58",
         title: "Welcome to River Clinic",
         cover: riverClinicCover,
-        source: riverClinicVideo,
+        source: "welcome-to-river-st-endo.mov",
         type: "mov",
       },
     ] as IVideo[],
@@ -159,18 +144,18 @@ export const shortVideos: IWorkProject[] = [
     type: "Product",
     work: [
       {
-        id: "0c140f87-36e9-4c01-aee7-0cff0557666c",
-        title: "Olaplex",
-        cover: olaplexCover,
-        source: olaplexVideo,
-        type: "mp4",
-      },
-      {
         id: "b8102e6c-663f-46db-ad19-e9caf0625d41",
         title: "Ordinary",
         cover: ordinaryCover,
-        source: ordinaryVideo,
-        type: "mov",
+        source: "ordinary.mp4",
+        type: "mp4",
+      },
+      {
+        id: "0c140f87-36e9-4c01-aee7-0cff0557666c",
+        title: "Olaplex",
+        cover: olaplexCover,
+        source: "olaplex.mp4",
+        type: "mp4",
       },
     ] as IVideo[],
   },
@@ -190,14 +175,7 @@ export const longVideos: IWorkProject[] = [
         id: "7cfa8205-8912-473e-b001-ee9483c878e7",
         title: "Sales Training",
         cover: salesTrainingCover,
-        source: salesTrainingVideo,
-        type: "mp4",
-      },
-      {
-        id: "02063fd9-1fe1-4fb6-a065-af91b637d2b4",
-        title: "Sales Perspective",
-        cover: salesPerspectiveCover,
-        source: salesPerspectiveVideo,
+        source: "sales-training-video.mp4",
         type: "mp4",
       },
     ] as IVideo[],
@@ -215,7 +193,7 @@ export const longVideos: IWorkProject[] = [
         id: "02063fd9-1fe1-4fb6-a065-af91b637d2b4",
         title: "Sales Perspective",
         cover: salesPerspectiveCover,
-        source: salesPerspectiveVideo,
+        source: "monthly-revenue-sales-perspective.mp4",
         type: "mp4",
       },
     ] as IVideo[],
@@ -233,7 +211,7 @@ export const longVideos: IWorkProject[] = [
         id: "8056a7a2-a88c-4bcd-ac08-13b2f5f42a20",
         title: "Mindful Eating",
         cover: mindfulEatingCover,
-        source: mindfulEatingVideo,
+        source: "mindful-eating.mov",
         type: "mov",
       },
     ] as IVideo[],
@@ -251,7 +229,7 @@ export const longVideos: IWorkProject[] = [
         id: "9d28f949-05d6-44e4-8a54-70d68b6f9ed3",
         title: "LK Launch",
         cover: lkCover,
-        source: lkVideo,
+        source: "lk-video.mov",
         type: "mov",
       },
     ] as IVideo[],
@@ -269,7 +247,7 @@ export const longVideos: IWorkProject[] = [
         id: "84d80a81-697b-47ca-8ccd-2f4628bd2563",
         title: "Canvas Painting Event",
         cover: canvasEventCover,
-        source: canvasEventVideo,
+        source: "canvas-painting.mov",
         type: "mov",
       },
     ] as IVideo[],
