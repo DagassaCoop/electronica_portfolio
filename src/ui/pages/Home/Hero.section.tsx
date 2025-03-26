@@ -36,11 +36,7 @@ const Hero = () => {
             <img
               src={heroPerson}
               alt="person"
-              className="hero-img relative z-3 w-full "
-              style={{
-                maskImage:
-                  "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)",
-              }}
+              className="hero-img relative z-3 w-full"
             />
           </div>
 
