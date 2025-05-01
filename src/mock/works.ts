@@ -16,6 +16,10 @@ import salesPerspectiveCover from "../assets/portfolio/covers/Sales perspective.
 import mindfulEatingCover from "../assets/portfolio/covers/Mindful eating.png";
 import lkCover from "../assets/portfolio/covers/Software launch.png";
 import canvasEventCover from "../assets/portfolio/covers/Canvas painting.png";
+import eeVideoCover from "../assets/portfolio/covers/ee video.png";
+import companyOverviewCover from "../assets/portfolio/covers/company overview.png";
+import manufacturingWalkThroughCover from "../assets/portfolio/covers/manufacturing walk through.png";
+import quichInsightsCover from "../assets/portfolio/covers/quich insights.png";
 
 //  Graphic Designs
 import billboard_1 from "../assets/portfolio/graphic design/billboard 1.png";
@@ -37,6 +41,42 @@ import clinic_7 from "../assets/portfolio/graphic design/7.png";
 // import christmas_5 from "../assets/portfolio/photos/IMG_3941 2.jpg";
 
 export const shortVideos: IWorkProject[] = [
+  {
+    id: "ab2b9ed0-9c23-4783-bd0f-9f6abfe3ce70",
+    title: "Behind the Scenes: Site Visit with Edgecom Energy",
+    description:
+      "Description: A dynamic and professional reel capturing a site visit conducted by Edgecom Energy at a manufacturing facility.",
+    cover: manufacturingWalkThroughCover,
+    group: "short video",
+    type: "Corporate",
+    work: [
+      {
+        id: "bae64978-8282-4e83-b5e8-1a4cb1a774bc",
+        title: "Behind the Scenes: Site Visit with Edgecom Energy",
+        cover: manufacturingWalkThroughCover,
+        source: "Site visit short video.mov",
+        type: "mov",
+      },
+    ],
+  },
+  {
+    id: "d10c3656-4a12-4697-b009-60a0fe87c36e",
+    title: "Quick CEO Insights",
+    description:
+      "Description: A short educational reel featuring the CEO of Edgecom Energy, filmed and edited to share clear, insightful commentary in a concise, engaging format.",
+    cover: quichInsightsCover,
+    group: "short video",
+    type: "Corporate",
+    work: [
+      {
+        id: "486751b0-b6e9-4286-b47b-b0ca950ede6b",
+        title: "Quick CEO Insights",
+        cover: quichInsightsCover,
+        source: "Q1 (Jan-Feb) new intro.mov",
+        type: "mov",
+      },
+    ],
+  },
   {
     id: "e2c7554f-6805-407a-a2d7-fe858f2e19e4",
     title: "Strength in Every Rep",
@@ -163,6 +203,24 @@ export const shortVideos: IWorkProject[] = [
 
 export const longVideos: IWorkProject[] = [
   {
+    id: "1aaaa29a-31eb-4d9b-9e04-4f9905cff68c",
+    title: "Leading with Purpose",
+    description:
+      "A clean and professional corporate video created for Edgecom Energy, featuring their CEO as he shares the company’s mission and the importance of their work.",
+    cover: eeVideoCover,
+    group: "long video",
+    type: "Corporate",
+    work: [
+      {
+        id: "f6cdbc94-2383-4e7a-93ec-ced84c7ae49a",
+        title: "Leading with Purpose",
+        cover: eeVideoCover,
+        source: "Video_Card_mp4_20250311_Final.mov",
+        type: "mov",
+      },
+    ] as IVideo[],
+  },
+  {
     id: "b8d3ac8f-bcb6-4db7-b015-6ccd66597831",
     title: "Staying Relevant in Sales p.1",
     description:
@@ -176,6 +234,24 @@ export const longVideos: IWorkProject[] = [
         title: "Sales Training",
         cover: salesTrainingCover,
         source: "sales-training-video.mp4",
+        type: "mp4",
+      },
+    ] as IVideo[],
+  },
+  {
+    id: "9effef0d-3728-4995-b1ee-11ae9e25aef2",
+    title: "Who We Are: Company Overview",
+    description:
+      "A clean and professional video introducing the company, its mission, and services. All b-roll footage was filmed with real team members and authentic moments from their day-to-day process, creating an honest and engaging snapshot of the company’s work and culture.",
+    cover: companyOverviewCover,
+    group: "long video",
+    type: "Corporate",
+    work: [
+      {
+        id: "ad3e1954-a89f-4ac9-8e53-8ca6809cef8f",
+        title: "Who We Are: Company Overview",
+        cover: salesTrainingCover,
+        source: "Video_Brand Awareness _mov_20250312_Final upd quality.mp4",
         type: "mp4",
       },
     ] as IVideo[],

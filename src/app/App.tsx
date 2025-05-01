@@ -9,7 +9,6 @@ const App = () => {
   const { pathname } = useLocation();
 
   useLayoutEffect(() => {
-    console.log(pathname);
     document.getElementById("root")?.scrollTo(0, 0);
   }, [pathname]);
 

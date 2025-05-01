@@ -32,7 +32,7 @@ const Hero = () => {
       {/* Image */}
       <div className="absolute pointer-events-none z-2 bottom-0 right-0 translate-x-[20%] translate-y-[4rem] md:translate-x-20 xl:overflow-hidden xl:w-[800px] xl:translate-x-[100px] xl:translate-y-0 2xl:right-40">
         <div className="relative z-3 flex justify-center w-[650px] xl:w-full">
-          <div className="w-[350px] lg:w-[400px] xl:w-[500px]">
+          <div className="w-[350px] lg:w-[400px] xl:w-[450px]">
             <img
               src={heroPerson}
               alt="person"
