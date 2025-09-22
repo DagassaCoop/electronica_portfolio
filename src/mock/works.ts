@@ -42,6 +42,24 @@ import clinic_7 from "../assets/portfolio/graphic design/7.png";
 
 export const shortVideos: IWorkProject[] = [
   {
+    id: "d10c3656-4a12-4697-b009-60a0fe87c36e",
+    title: "Quick CEO Insights",
+    description:
+      "Description: A short educational reel featuring the CEO of Edgecom Energy, filmed and edited to share clear, insightful commentary in a concise, engaging format.",
+    cover: quichInsightsCover,
+    group: "short video",
+    type: "Corporate",
+    work: [
+      {
+        id: "486751b0-b6e9-4286-b47b-b0ca950ede6b",
+        title: "Quick CEO Insights",
+        cover: quichInsightsCover,
+        source: "Q1 (Jan-Feb) new intro.mov",
+        type: "mov",
+      },
+    ],
+  },
+  {
     id: "ab2b9ed0-9c23-4783-bd0f-9f6abfe3ce70",
     title: "Behind the Scenes: Site Visit with Edgecom Energy",
     description:
@@ -60,22 +78,29 @@ export const shortVideos: IWorkProject[] = [
     ],
   },
   {
-    id: "d10c3656-4a12-4697-b009-60a0fe87c36e",
-    title: "Quick CEO Insights",
+    id: "2c31860c-335b-49ac-be88-16645e0a6520",
+    title: "Cosmetic brands: Simplicity in Focus",
     description:
-      "Description: A short educational reel featuring the CEO of Edgecom Energy, filmed and edited to share clear, insightful commentary in a concise, engaging format.",
-    cover: quichInsightsCover,
+      "Clean and simple reels I created to highlight brands’ beauty and transparency.",
+    cover: ordinaryCover,
     group: "short video",
-    type: "Corporate",
+    type: "Product",
     work: [
       {
-        id: "486751b0-b6e9-4286-b47b-b0ca950ede6b",
-        title: "Quick CEO Insights",
-        cover: quichInsightsCover,
-        source: "Q1 (Jan-Feb) new intro.mov",
-        type: "mov",
+        id: "b8102e6c-663f-46db-ad19-e9caf0625d41",
+        title: "Ordinary",
+        cover: ordinaryCover,
+        source: "ordinary.mp4",
+        type: "mp4",
       },
-    ],
+      {
+        id: "0c140f87-36e9-4c01-aee7-0cff0557666c",
+        title: "Olaplex",
+        cover: olaplexCover,
+        source: "olaplex.mp4",
+        type: "mp4",
+      },
+    ] as IVideo[],
   },
   {
     id: "e2c7554f-6805-407a-a2d7-fe858f2e19e4",
@@ -171,31 +196,6 @@ export const shortVideos: IWorkProject[] = [
         cover: riverClinicCover,
         source: "welcome-to-river-st-endo.mov",
         type: "mov",
-      },
-    ] as IVideo[],
-  },
-  {
-    id: "2c31860c-335b-49ac-be88-16645e0a6520",
-    title: "Cosmetic brands: Simplicity in Focus",
-    description:
-      "Clean and simple reels I created to highlight brands’ beauty and transparency.",
-    cover: ordinaryCover,
-    group: "short video",
-    type: "Product",
-    work: [
-      {
-        id: "b8102e6c-663f-46db-ad19-e9caf0625d41",
-        title: "Ordinary",
-        cover: ordinaryCover,
-        source: "ordinary.mp4",
-        type: "mp4",
-      },
-      {
-        id: "0c140f87-36e9-4c01-aee7-0cff0557666c",
-        title: "Olaplex",
-        cover: olaplexCover,
-        source: "olaplex.mp4",
-        type: "mp4",
       },
     ] as IVideo[],
   },
