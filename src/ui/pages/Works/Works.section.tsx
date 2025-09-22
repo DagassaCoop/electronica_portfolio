@@ -27,7 +27,7 @@ const WorksSection = () => {
 
   return (
     <section id="works" className="relative container pt-12 pb-24">
-      <h1 className="h1 mb-16">Past works edited and filmed by me</h1>
+      <h1 className="h1 mb-16">Past works scripted, filmed and edited by me</h1>
 
       <div className="grid grid-cols-2 max-sm:gap-4 sm:flex justify-around items-center w-full h-auto mb-8">
         {WORK_TYPES.map((item) => {
