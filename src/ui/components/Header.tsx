@@ -24,7 +24,7 @@ const Header = () => {
   const lastNavLink = navLinks.at(-1);
 
   return (
-    <div className="fixed z-50 top-0 w-full xl:absolute">
+    <div className="relative w-full">
       <div
         className={[
           "w-full relative md:flex md:justify-between md:items-center md:w-fit md:mx-auto md:gap-8 md:py-2 xl:w-full xl:container",
