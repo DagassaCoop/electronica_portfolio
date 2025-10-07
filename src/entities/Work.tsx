@@ -1,8 +1,10 @@
-export type TWorkGroup =
-  | "long video"
-  | "short video"
-  | "photo"
-  | "graphic design";
+export const WORK_GROUPS = [
+  "long video",
+  "short video",
+  "photos & graphic design",
+] as const;
+
+export type TWorkGroup = (typeof WORK_GROUPS)[number];
 
 export type TProjectTypes = "Product" | "Social media" | "Corporate" | "Event";
 
