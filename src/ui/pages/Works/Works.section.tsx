@@ -17,7 +17,7 @@ const WorksSection = () => {
   return (
     <section
       id="works"
-      className="relative container flex flex-col items-center pt-12 pb-24"
+      className="relative container flex flex-col items-center pt-12 pb-12"
     >
       <h1 className="h1 mb-16">Past works scripted, filmed and edited by me</h1>
 
@@ -42,7 +42,7 @@ const WorksSection = () => {
 
       {/* Content */}
       {workGroup === "long video" && (
-        <div className="w-full grid xl:grid-cols-2 gap-14 mb-20">
+        <div className="w-full grid xl:grid-cols-2 gap-14">
           {longVideos.map((item) => {
             return <WorkProject project={item} key={item.id} />;
           })}
@@ -50,7 +50,7 @@ const WorksSection = () => {
       )}
 
       {workGroup === "short video" && (
-        <div className="w-full grid xl:grid-cols-2 gap-14 mb-20">
+        <div className="w-full grid xl:grid-cols-2 gap-14">
           {shortVideos.map((item) => {
             return <WorkProject project={item} key={item.id} />;
           })}
