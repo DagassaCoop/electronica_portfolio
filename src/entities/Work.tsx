@@ -36,7 +36,9 @@ export interface IVideo extends IWorkBase {
   type: "mp4" | "mov";
 }
 
-export type IPhoto = IWorkBase;
+export interface IPhoto extends IWorkBase {
+  blurhash?: string;
+}
 
 export interface IWorkPreview {
   id: string;

@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState, useEffect, useCallback } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -7,6 +7,7 @@ import {
   CarouselPrevious,
   CarouselApi,
 } from "@/ui/shadcn/carousel";
+import { Blurhash } from "react-blurhash";
 import { IPhoto } from "@/entities/Work";
 import { useImagePreloader } from "@/lib/useImagePreloader";
 
@@ -20,10 +21,41 @@ const PhotoCarousel: FC<IPhotoCarouselProps> = ({ photos, onClose }) => {
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
   const { isImageLoaded, registerImageLoaded } = useImagePreloader();
+  const [loadingImages, setLoadingImages] = useState<Set<string>>(new Set());
 
-  const handleImageLoad = (url: string) => {
-    registerImageLoaded(url);
-  };
+  const handleImageLoad = useCallback(
+    (url: string) => {
+      registerImageLoaded(url);
+    },
+    [registerImageLoaded]
+  );
+
+  // Preload images programmatically to avoid progressive loading
+  useEffect(() => {
+    photos.forEach((photo) => {
+      if (!isImageLoaded(photo.source) && !loadingImages.has(photo.source)) {
+        setLoadingImages((prev) => new Set(prev).add(photo.source));
+
+        const img = new Image();
+        img.onload = () => {
+          handleImageLoad(photo.source);
+          setLoadingImages((prev) => {
+            const next = new Set(prev);
+            next.delete(photo.source);
+            return next;
+          });
+        };
+        img.onerror = () => {
+          setLoadingImages((prev) => {
+            const next = new Set(prev);
+            next.delete(photo.source);
+            return next;
+          });
+        };
+        img.src = photo.source;
+      }
+    });
+  }, [photos, isImageLoaded, loadingImages, handleImageLoad]);
 
   useEffect(() => {
     if (!api) return;
@@ -74,25 +106,30 @@ const PhotoCarousel: FC<IPhotoCarouselProps> = ({ photos, onClose }) => {
               key={photo.id}
               className="pl-2 md:pl-4 basis-[85%] md:basis-[80%]"
             >
-              <div className="border-[3px] border-color-grey rounded-3xl overflow-hidden shadow-xl bg-color-kidnapper transition-transform duration-300 relative">
-                {!isImageLoaded(photo.source) && (
-                  <div className="absolute inset-0 bg-color-kidnapper flex items-center justify-center">
-                    <div className="w-full h-[60vh] flex items-center justify-center">
-                      <div className="w-16 h-16 border-4 border-color-grey/30 border-t-color-blue rounded-full animate-spin" />
+              <div className="border-[3px] border-color-grey rounded-3xl overflow-hidden shadow-xl bg-color-kidnapper transition-transform duration-300 relative min-h-[300px]">
+                {photo.blurhash && !isImageLoaded(photo.source) && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-full h-auto">
+                      <Blurhash
+                        hash={photo.blurhash}
+                        width="100%"
+                        height="100%"
+                        resolutionX={32}
+                        resolutionY={32}
+                        punch={1}
+                      />
                     </div>
                   </div>
                 )}
-                <img
-                  src={photo.source}
-                  alt={photo.title}
-                  className={`w-full h-auto object-cover transition-opacity duration-700 ${
-                    isImageLoaded(photo.source) ? "opacity-100" : "opacity-0"
-                  }`}
-                  loading={index === 0 ? "eager" : "lazy"}
-                  fetchPriority={index === 0 ? "high" : "low"}
-                  decoding="async"
-                  onLoad={() => handleImageLoad(photo.source)}
-                />
+                {isImageLoaded(photo.source) && (
+                  <img
+                    src={photo.source}
+                    alt={photo.title}
+                    className="w-full h-auto animate-fadeIn"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    fetchPriority={index === 0 ? "high" : "low"}
+                  />
+                )}
               </div>
             </CarouselItem>
           ))}
