@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, useCallback, useRef } from "react";
 
 // Entities
 import { IWorkProject, IPhoto } from "@/entities/Work";
@@ -10,6 +10,9 @@ import PhotoCarousel from "./PhotoCarousel";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { Skeleton } from "@/ui/shadcn/skeleton";
 
+// Hooks
+import { useImagePreloader } from "@/lib/useImagePreloader";
+
 interface IWorkItemProps {
   project: IWorkProject;
 }
@@ -17,10 +20,30 @@ interface IWorkItemProps {
 const WorkItem: FC<IWorkItemProps> = ({ project }) => {
   const [showModal, setShowModal] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const { preloadImages, preloadImagesHighPriority } = useImagePreloader();
+  const hasPreloaded = useRef(false);
 
   // Check if work is photos or videos
   const isPhotoProject =
     project.work.length > 0 && !("type" in project.work[0]);
+
+  // Preload images on hover with priority: first image high, rest low
+  const handleMouseEnter = useCallback(() => {
+    if (isPhotoProject && !hasPreloaded.current) {
+      hasPreloaded.current = true;
+      const photoUrls = (project.work as IPhoto[]).map((photo) => photo.source);
+
+      if (photoUrls.length > 0) {
+        // First image with high priority
+        preloadImagesHighPriority([photoUrls[0]]);
+
+        // Rest with low priority
+        if (photoUrls.length > 1) {
+          preloadImages(photoUrls.slice(1));
+        }
+      }
+    }
+  }, [isPhotoProject, project.work, preloadImages, preloadImagesHighPriority]);
 
   return (
     <Dialog open={showModal} onOpenChange={setShowModal}>
@@ -28,6 +51,7 @@ const WorkItem: FC<IWorkItemProps> = ({ project }) => {
         <div
           key={project.id}
           className="works-item group flex flex-col justify-between w-full border-[3px] border-color-grey rounded-3xl px-7 pt-7 pb-8 transition ease-in-out hover:bg-color-blue hover:text-white hover:border-color-blue cursor-pointer"
+          onMouseEnter={handleMouseEnter}
         >
           <div className="max-h-[30vh] flex justify-center items-center border-[3px] border-color-grey rounded-3xl mb-8 overflow-hidden transition ease-in-out group-hover:scale-[102.5%]">
             {!isImageLoaded && <Skeleton className="w-full h-[30vh]" />}
@@ -37,6 +61,7 @@ const WorkItem: FC<IWorkItemProps> = ({ project }) => {
               className={`scale-[101%] w-full transition-opacity duration-300 ${
                 isImageLoaded ? "opacity-100" : "opacity-0"
               }`}
+              fetchPriority="high"
               onLoad={() => setIsImageLoaded(true)}
             />
           </div>

@@ -8,6 +8,7 @@ import {
   CarouselApi,
 } from "@/ui/shadcn/carousel";
 import { IPhoto } from "@/entities/Work";
+import { useImagePreloader } from "@/lib/useImagePreloader";
 
 interface IPhotoCarouselProps {
   photos: IPhoto[];
@@ -18,7 +19,11 @@ const PhotoCarousel: FC<IPhotoCarouselProps> = ({ photos, onClose }) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
+  const { isImageLoaded, registerImageLoaded } = useImagePreloader();
+
+  const handleImageLoad = (url: string) => {
+    registerImageLoaded(url);
+  };
 
   useEffect(() => {
     if (!api) return;
@@ -49,10 +54,6 @@ const PhotoCarousel: FC<IPhotoCarouselProps> = ({ photos, onClose }) => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [api, onClose]);
 
-  const handleImageLoad = (photoId: string) => {
-    setLoadedImages((prev) => new Set(prev).add(photoId));
-  };
-
   const scrollTo = (index: number) => {
     api?.scrollTo(index);
   };
@@ -68,13 +69,13 @@ const PhotoCarousel: FC<IPhotoCarouselProps> = ({ photos, onClose }) => {
         className="w-full"
       >
         <CarouselContent className="-ml-2 md:-ml-4">
-          {photos.map((photo) => (
+          {photos.map((photo, index) => (
             <CarouselItem
               key={photo.id}
-              className="pl-2 md:pl-4 basis-[85%] md:basis-[80%] min-h-[20vh]"
+              className="pl-2 md:pl-4 basis-[85%] md:basis-[80%]"
             >
               <div className="border-[3px] border-color-grey rounded-3xl overflow-hidden shadow-xl bg-color-kidnapper transition-transform duration-300 relative">
-                {!loadedImages.has(photo.id) && (
+                {!isImageLoaded(photo.source) && (
                   <div className="absolute inset-0 bg-color-kidnapper flex items-center justify-center">
                     <div className="w-full h-[60vh] flex items-center justify-center">
                       <div className="w-16 h-16 border-4 border-color-grey/30 border-t-color-blue rounded-full animate-spin" />
@@ -85,9 +86,12 @@ const PhotoCarousel: FC<IPhotoCarouselProps> = ({ photos, onClose }) => {
                   src={photo.source}
                   alt={photo.title}
                   className={`w-full h-auto object-cover transition-opacity duration-700 ${
-                    loadedImages.has(photo.id) ? "opacity-100" : "opacity-0"
+                    isImageLoaded(photo.source) ? "opacity-100" : "opacity-0"
                   }`}
-                  onLoad={() => handleImageLoad(photo.id)}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  fetchPriority={index === 0 ? "high" : "low"}
+                  decoding="async"
+                  onLoad={() => handleImageLoad(photo.source)}
                 />
               </div>
             </CarouselItem>
