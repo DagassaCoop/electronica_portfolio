@@ -71,7 +71,7 @@ const PhotoCarousel: FC<IPhotoCarouselProps> = ({ photos, onClose }) => {
           {photos.map((photo) => (
             <CarouselItem
               key={photo.id}
-              className="pl-2 md:pl-4 basis-[85%] md:basis-[80%]"
+              className="pl-2 md:pl-4 basis-[85%] md:basis-[80%] min-h-[20vh]"
             >
               <div className="border-[3px] border-color-grey rounded-3xl overflow-hidden shadow-xl bg-color-kidnapper transition-transform duration-300 relative">
                 {!loadedImages.has(photo.id) && (

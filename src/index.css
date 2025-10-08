@@ -54,6 +54,13 @@ body {
   scroll-behavior: smooth;
 }
 
+/* High quality image rendering */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: bicubic;
+}
+
 @layer base {
   body {
     @apply font-poppins bg-color-kidnapper text-color-black text-base;
