@@ -384,49 +384,13 @@ export const longVideos: IWorkProject[] = [
 
 export const photosAndGraphic: IWorkProject[] = [
   {
-    id: "a1b2c3d4-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
-    title: "Holiday Chocolate Photography",
-    description:
-      "A cozy product photography series for a chocolate brand's holiday campaign, capturing the warmth and sweetness of the season.",
-    cover: holidayChocCover,
-    group: "photos & graphic design",
-    type: "Product",
-    work: [
-      {
-        id: "h1c1-0001-0001-0001-000000000001",
-        title: "Holiday Chocolate 1",
-        source: holidayChoc1,
-      },
-      {
-        id: "h1c1-0001-0001-0001-000000000002",
-        title: "Holiday Chocolate 2",
-        source: holidayChoc2,
-      },
-      {
-        id: "h1c1-0001-0001-0001-000000000003",
-        title: "Holiday Chocolate 3",
-        source: holidayChoc3,
-      },
-      {
-        id: "h1c1-0001-0001-0001-000000000004",
-        title: "Holiday Chocolate 4",
-        source: holidayChoc4,
-      },
-      {
-        id: "h1c1-0001-0001-0001-000000000005",
-        title: "Holiday Chocolate 5",
-        source: holidayChoc5,
-      },
-    ] as IPhoto[],
-  },
-  {
     id: "b2c3d4e5-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
     title: "Behind the Scenes: Manufacturing Site Photography",
     description:
       "Professional on-site photography documenting Edgecom Energy's visit to a manufacturing facility, capturing the technical process and team collaboration.",
     cover: onSitePicturesCover,
     group: "photos & graphic design",
-    type: "Corporate",
+    type: "Photography & Design",
     work: [
       {
         id: "os01-0001-0001-0001-000000000001",
@@ -466,59 +430,13 @@ export const photosAndGraphic: IWorkProject[] = [
     ] as IPhoto[],
   },
   {
-    id: "c3d4e5f6-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
-    title: "River Street Endodontics Social Media Graphics",
-    description:
-      "A series of clean and engaging social media graphics designed for River Street Endodontics, combining educational content with modern aesthetics.",
-    cover: dentalSocialMediaCover,
-    group: "photos & graphic design",
-    type: "Social media",
-    work: [
-      {
-        id: "dn01-0001-0001-0001-000000000001",
-        title: "Dental Social Media Post 1",
-        source: dental1,
-      },
-      {
-        id: "dn01-0001-0001-0001-000000000002",
-        title: "Dental Social Media Post 2",
-        source: dental2,
-      },
-      {
-        id: "dn01-0001-0001-0001-000000000003",
-        title: "Dental Social Media Post 3",
-        source: dental3,
-      },
-      {
-        id: "dn01-0001-0001-0001-000000000004",
-        title: "Dental Social Media Post 4",
-        source: dental4,
-      },
-      {
-        id: "dn01-0001-0001-0001-000000000005",
-        title: "Dental Social Media Post 5",
-        source: dental5,
-      },
-      {
-        id: "dn01-0001-0001-0001-000000000006",
-        title: "Dental Social Media Post 6",
-        source: dental6,
-      },
-      {
-        id: "dn01-0001-0001-0001-000000000007",
-        title: "Dental Social Media Post 7",
-        source: dental7,
-      },
-    ] as IPhoto[],
-  },
-  {
     id: "d4e5f6g7-8h9i-0j1k-2l3m-4n5o6p7q8r9s",
     title: "Edgecom Energy Social Media Graphics",
     description:
       "A comprehensive collection of professional social media graphics created for Edgecom Energy, featuring corporate branding, educational content, and promotional materials.",
     cover: edgecomSocialMediaCover,
     group: "photos & graphic design",
-    type: "Social media",
+    type: "Graphic Design",
     work: [
       {
         id: "ee01-0001-0001-0001-000000000001",
@@ -603,13 +521,97 @@ export const photosAndGraphic: IWorkProject[] = [
     ] as IPhoto[],
   },
   {
+    id: "a1b2c3d4-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+    title: "Holiday Chocolate Photography",
+    description:
+      "A cozy product photography series for a chocolate brand's holiday campaign, capturing the warmth and sweetness of the season.",
+    cover: holidayChocCover,
+    group: "photos & graphic design",
+    type: "Photography",
+    work: [
+      {
+        id: "h1c1-0001-0001-0001-000000000001",
+        title: "Holiday Chocolate 1",
+        source: holidayChoc1,
+      },
+      {
+        id: "h1c1-0001-0001-0001-000000000002",
+        title: "Holiday Chocolate 2",
+        source: holidayChoc2,
+      },
+      {
+        id: "h1c1-0001-0001-0001-000000000003",
+        title: "Holiday Chocolate 3",
+        source: holidayChoc3,
+      },
+      {
+        id: "h1c1-0001-0001-0001-000000000004",
+        title: "Holiday Chocolate 4",
+        source: holidayChoc4,
+      },
+      {
+        id: "h1c1-0001-0001-0001-000000000005",
+        title: "Holiday Chocolate 5",
+        source: holidayChoc5,
+      },
+    ] as IPhoto[],
+  },
+
+  {
+    id: "c3d4e5f6-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
+    title: "River Street Endodontics Social Media Graphics",
+    description:
+      "A series of clean and engaging social media graphics designed for River Street Endodontics, combining educational content with modern aesthetics.",
+    cover: dentalSocialMediaCover,
+    group: "photos & graphic design",
+    type: "Graphic Design",
+    work: [
+      {
+        id: "dn01-0001-0001-0001-000000000001",
+        title: "Dental Social Media Post 1",
+        source: dental1,
+      },
+      {
+        id: "dn01-0001-0001-0001-000000000002",
+        title: "Dental Social Media Post 2",
+        source: dental2,
+      },
+      {
+        id: "dn01-0001-0001-0001-000000000003",
+        title: "Dental Social Media Post 3",
+        source: dental3,
+      },
+      {
+        id: "dn01-0001-0001-0001-000000000004",
+        title: "Dental Social Media Post 4",
+        source: dental4,
+      },
+      {
+        id: "dn01-0001-0001-0001-000000000005",
+        title: "Dental Social Media Post 5",
+        source: dental5,
+      },
+      {
+        id: "dn01-0001-0001-0001-000000000006",
+        title: "Dental Social Media Post 6",
+        source: dental6,
+      },
+      {
+        id: "dn01-0001-0001-0001-000000000007",
+        title: "Dental Social Media Post 7",
+        source: dental7,
+      },
+    ] as IPhoto[],
+  },
+
+  {
     id: "e5f6g7h8-9i0j-1k2l-3m4n-5o6p7q8r9s0t",
     title: "Lovo Chocolate Billboard Campaign",
     description:
       "A striking billboard campaign for Lovo Chocolate, designed to capture attention and showcase the brand's premium quality in large-format outdoor advertising.",
     cover: lovoChocolateCover,
     group: "photos & graphic design",
-    type: "Product",
+    type: "Graphic Design",
     work: [
       {
         id: "lv01-0001-0001-0001-000000000001",

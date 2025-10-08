@@ -6,7 +6,14 @@ export const WORK_GROUPS = [
 
 export type TWorkGroup = (typeof WORK_GROUPS)[number];
 
-export type TProjectTypes = "Product" | "Social media" | "Corporate" | "Event";
+export type TProjectTypes =
+  | "Product"
+  | "Social media"
+  | "Corporate"
+  | "Event"
+  | "Graphic Design"
+  | "Photography & Design"
+  | "Photography";
 
 interface IWorkBase {
   id: string;
