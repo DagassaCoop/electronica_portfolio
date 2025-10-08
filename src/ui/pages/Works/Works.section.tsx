@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // Mock
-import { longVideos, shortVideos } from "@/mock/works";
+import { longVideos, photosAndGraphic, shortVideos } from "@/mock/works";
 
 // Entities
 import { TWorkGroup, WORK_GROUPS } from "@/entities/Work";
@@ -52,6 +52,14 @@ const WorksSection = () => {
       {workGroup === "short video" && (
         <div className="w-full grid xl:grid-cols-2 gap-14">
           {shortVideos.map((item) => {
+            return <WorkProject project={item} key={item.id} />;
+          })}
+        </div>
+      )}
+
+      {workGroup === "photos & graphic design" && (
+        <div className="w-full grid xl:grid-cols-2 gap-14">
+          {photosAndGraphic.map((item) => {
             return <WorkProject project={item} key={item.id} />;
           })}
         </div>
