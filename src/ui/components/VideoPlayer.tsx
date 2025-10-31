@@ -11,7 +11,7 @@ const VideoPlayer: FC<IVideoPlayerProps> = ({ url }) => {
       <video
         controls
         autoPlay
-        preload="auto"
+        preload="metadata"
         className={[
           "relative max-h-[80vh] w-auto",
           loading ? "invisible" : "visible z-10",

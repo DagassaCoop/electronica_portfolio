@@ -285,7 +285,7 @@ export const longVideos: IWorkProject[] = [
         id: "7cfa8205-8912-473e-b001-ee9483c878e7",
         title: "Sales Training",
         cover: salesTrainingCover,
-        source: "sales-training-video.mp4",
+        source: "sales-training-video_faststart.mp4",
         type: "mp4",
       },
     ] as IVideo[],
