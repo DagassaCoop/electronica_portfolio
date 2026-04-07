@@ -65,7 +65,7 @@ const Contact = () => {
               submit
             </button>
           </form>
-          <div>
+          {/* <div>
             <p className="body-1 text-sm text-color-kidnapper/50 mb-2">
               or find me on:
             </p>
@@ -97,7 +97,7 @@ const Contact = () => {
                 />
               )}
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="absolute bottom-0 -left-1/2 -right-1/2 z-1 h-[380px] bg-color-blue" />
       </section>

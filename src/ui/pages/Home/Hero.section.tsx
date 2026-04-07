@@ -24,7 +24,7 @@ const Hero = () => {
         </p>
 
         <div className="flex gap-6 mt-16 mb-5">
-          <LoadFileButton>resume</LoadFileButton>
+          {/* <LoadFileButton>resume</LoadFileButton> */}
           <Branch />
         </div>
       </div>

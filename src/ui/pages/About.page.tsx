@@ -44,9 +44,9 @@ const About = () => {
             your digital footprint.
           </p>
 
-          <LoadFileButton icon iconClass="text-color-blue" className="mb-16">
+          {/* <LoadFileButton icon iconClass="text-color-blue" className="mb-16">
             resume
-          </LoadFileButton>
+          </LoadFileButton> */}
 
           {/* <div className="w-fit flex justify-between items-center gap-3 mb-12">
             <p className="body-1">designs you&apos;ll</p>
@@ -54,7 +54,7 @@ const About = () => {
             <p className="body-1">, guaranteed.</p>
           </div> */}
 
-          <p className="body-1 text-color-grey opacity-80 text-sm mb-1">
+          {/* <p className="body-1 text-color-grey opacity-80 text-sm mb-1">
             or find me on:
           </p>
           <div className="flex justify-start items-center gap-4 -translate-x-1">
@@ -85,7 +85,7 @@ const About = () => {
                 href={contactInfo.linkedIn}
               />
             )}
-          </div>
+          </div> */}
         </div>
       </section>
     </>

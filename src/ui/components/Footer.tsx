@@ -53,13 +53,13 @@ const Footer = () => {
           );
         })}
       </div>
-      <a
+      {/* <a
         className="body-2 font-bold text-color-grey hover:text-color-blue hover:opacity-30 mb-10 cursor-pointer"
         href={`mailto:${contactInfo.email}`}
       >
         {contactInfo.email || "gmail.com"}
-      </a>
-      <div className="flex justify-center items-center gap-8">
+      </a> */}
+      {/* <div className="flex justify-center items-center gap-8">
         {contactInfo.instagram && (
           <IconButton
             icon={
@@ -87,7 +87,7 @@ const Footer = () => {
             href={contactInfo.linkedIn}
           />
         )}
-      </div>
+      </div> */}
 
       <div className="absolute left-0 top-[10%] -translate-x-1/2 w-fit h-fit hidden xl:block">
         <Spiral className="text-color-greyLight" />
