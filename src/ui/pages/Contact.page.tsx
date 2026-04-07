@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 // Mock
-import { contactInfo } from "@/mock";
+// import { contactInfo } from "@/mock";
 
 // Components
-import IconButton from "../components/IconButton";
+// import IconButton from "../components/IconButton";
 
 // Assets
-import { InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
+// import { InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
 
 const Contact = () => {
   const [name, setName] = useState("");

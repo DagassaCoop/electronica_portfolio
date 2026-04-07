@@ -6,12 +6,13 @@ import IconButton from "./IconButton";
 
 // Assets
 import Logo from "@/assets/svg/Logo";
-import { InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
+// import { InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
 import Hypotrochoid from "@/assets/svg/Hypotrochoid";
 import Spiral from "@/assets/svg/Spiral";
 
 // Mock
-import { navLinks, contactInfo } from "@/mock";
+import { navLinks } from "@/mock";
+// import { contactInfo } from "@/mock";
 
 const Footer = () => {
   return (

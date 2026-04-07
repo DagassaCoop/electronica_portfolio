@@ -1,13 +1,13 @@
 // Assets
-import { LinkedinLogo, InstagramLogo } from "@phosphor-icons/react";
+// import { LinkedinLogo, InstagramLogo } from "@phosphor-icons/react";
 import person from "@/assets/about-person.jpg";
 
 // Components
-import IconButton from "../components/IconButton";
-import LoadFileButton from "../components/LoadFileButton";
+// import IconButton from "../components/IconButton";
+// import LoadFileButton from "../components/LoadFileButton";
 
 // Mock
-import { contactInfo } from "@/mock";
+// import { contactInfo } from "@/mock";
 
 const About = () => {
   return (
